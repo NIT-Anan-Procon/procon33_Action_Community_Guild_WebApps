@@ -2,3 +2,8 @@ button{
     background-color:aqua;
     width : 100%;
 }
+
+.content{
+    background-color:aqua;
+    border:solid;
+}
