@@ -35,13 +35,6 @@
                 echo "$dt->msg";
                 echo '</button></form>';
                 echo "\n";
-                
-                
-                /*<form action="movie.html" method="post">
-
-                <button type="submit" value="押してね">ぼたん</button>
-                </form>
-                */
             }
         ?>
     </body>
