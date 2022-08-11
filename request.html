@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="ShiftJIS">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REQUEST SCREEN</title>
+</head>
+<body>
+    <p>依頼フォーム</p>
+    <form action="#" method="post">
+        <p>依頼名<br>
+        <input type="text" name="request_name"></p>
+        <p>依頼ランク<br>
+            <input type="radio" name="request_rank" value="A" checked="checked">
+            <input type="radio" name="request_rank" value="B">
+            <input type="radio" name="request_rank" value="C">
+            <input type="radio" name="request_rank" value="D">
+            <input type="radio" name="request_rank" value="E"></p>
+        <p>詳細文<br>
+            <textarea type="comment" name="request_detail" cols="30" rows="5"></textarea></p>
+        <p><input type="submit" name="request_send" value="送信"></p>
+    </form>
+</body>
+</html>
