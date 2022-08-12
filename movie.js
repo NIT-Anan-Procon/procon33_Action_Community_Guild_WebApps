@@ -25,11 +25,11 @@ function loader(){
     let infoHtml = ''
     infoHtml = infoHtml + '<img src="./images/';
 
-    if(iraisyo.rank == 1)infoHtml = infoHtml+'icon_rank_A.svg';
-    if(iraisyo.rank == 2)infoHtml = infoHtml+'icon_rank_B.svg';
-    if(iraisyo.rank == 3)infoHtml = infoHtml+'icon_rank_C.svg';
-    if(iraisyo.rank == 4)infoHtml = infoHtml+'icon_rank_D.svg';
-    if(iraisyo.rank == 5)infoHtml = infoHtml+'icon_rank_E.svg';
+    if(iraisyo.rank == 0)infoHtml = infoHtml+'icon_rank_A.svg';
+    if(iraisyo.rank == 1)infoHtml = infoHtml+'icon_rank_B.svg';
+    if(iraisyo.rank == 2)infoHtml = infoHtml+'icon_rank_C.svg';
+    if(iraisyo.rank == 3)infoHtml = infoHtml+'icon_rank_D.svg';
+    if(iraisyo.rank == 4)infoHtml = infoHtml+'icon_rank_E.svg';
 
     infoHtml = infoHtml + '" width= "80px">';
 
