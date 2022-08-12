@@ -4,9 +4,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
         <title></title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script src="Cookies.js"></script>
     </head>
     <body>
-        こんにちは
-        <a href="movieList.php">作ってるページはここから</a>
+        お名前入力してね
+        <form action="movieList.html" method="post">
+            <input type="text" name="name"/>
+            <input type="submit" onclick="setCookie();">
+        </form> 
     </body>
 </html>

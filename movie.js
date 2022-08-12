@@ -6,9 +6,8 @@ function loader(){
 
     document.getElementById("content").textContent = params.get('result');
 
-
     //o—Í
-    
+
     //“®‰æ‚Ìo—Í
     let movieHtml = '<video controls width="100%">'
     movieHtml = movieHtml + '<source src="./videos/nanika.mp4" type="video/mp4">'
