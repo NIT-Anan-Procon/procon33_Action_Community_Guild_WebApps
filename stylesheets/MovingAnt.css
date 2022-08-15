@@ -8,7 +8,7 @@ body {
 }
 
 .ant {
-  background: url(./images/ant.svg) no-repeat;
+  background: url(../images/ant.svg) no-repeat;
   width: 20px;
   height: 10px;
   animation: moving 0.3s steps(4) infinite;
