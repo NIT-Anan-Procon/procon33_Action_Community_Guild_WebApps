@@ -8,7 +8,7 @@ function getRequestList(){
     let infoHtml = ''
 
     for(const data of dataList){
-        infoHtml = infoHtml + '<button class="button" id="request" onclick="location.href=\'Recieve.html\'">';
+        infoHtml = infoHtml + '<button class="button" id="request" onclick="location.href=\'receive.html\'">';
             infoHtml = infoHtml + '<div class="whole">';
                 infoHtml = infoHtml + '<div class="above">';
                     infoHtml = infoHtml + '<div class="left">';

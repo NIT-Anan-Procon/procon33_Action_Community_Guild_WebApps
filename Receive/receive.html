@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../stylesheets/#">
     <script src = "../scripts/getRequest.js" type="text/javascript" charset="shift_jis"></script>
-    <title>judge page</title>
+    <title>receive page</title>
 </head>
 <body onload="getRequestInfo();">
     <div id="request"></div>
-            
-    <form>
-        <input type="radio" name="exam">‚¢‚¢‚Ë</input>
-        <input type="radio" name="exam">‚æ‚­‚È‚¢‚Ë</input><br>
-        <input type="submit">
+
+    <form action="test.html" method="post" enctype="multipart/form-data" >
+        <input type="file" name="test"><br>
+        <input type="submit" value="‘—M">
     </form>
 </body>
 </html>

@@ -1,9 +1,43 @@
-button{
-    background-color:aqua;
-    width : 100%;
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #aa68c7;
+    border-width: 3px;
+    margin-bottom: 10px;
+    min-width: 340px;
+    background-color: white;
 }
+.above {
+    display: flex;
+}
+.below {
+    width: 100%;
+    padding-top: 20px;
+}
+.picture {
+    border-radius: 10px;
+}
+.right {
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.left {
 
-.content{
-    background-color:aqua;
-    border:solid;
+}
+.rank {
+    margin: auto 0 auto 0;
+}
+.request-name {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+.user-name {
+    width: 100%;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
 }
