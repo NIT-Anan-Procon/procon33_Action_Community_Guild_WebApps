@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+
+.button {
+    font-family: 'Kiwi Maru', serif;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #aa68c7;
+    border-width: 3px;
+    margin-bottom: 10px;
+    min-width: 340px;
+    background-color: white;
+}
+.above {
+    display: flex;
+}
+.below {
+    width: 100%;
+    padding-top: 20px;
+}
+.picture {
+    border-radius: 10px;
+}
+.right {
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.left {
+
+}
+.rank {
+    margin: auto 0 auto 0;
+}
+.request-name {
+    font-size: large;
+    white-space: nowrap;
+}
+.user-name {
+    width: 100%;
+    font-size: medium;
+    margin-bottom: 5px;
+}
+.ants {
+    display: flex;
+    margin: 0 auto 0 auto;
+    width: 250px;
+}
+.ant {
+    background: url(../images/ant.svg) no-repeat;
+    width: 50px;
+    height: 25px;
+    animation: move 0.3s steps(4) infinite;
+}
+   
+@keyframes move {
+    to {
+      background-position: -200px 0;
+    }
+}
