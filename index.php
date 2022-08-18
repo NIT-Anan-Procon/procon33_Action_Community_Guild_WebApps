@@ -1,4 +1,3 @@
-<?php header("Content-Type: text/html;charset=Shift_JIS");?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,14 +8,14 @@
 </head>
 <body>
     <div>
-        <h1>‚Ó‚Ÿ[‚·‚Æ‚Ø[‚¶</h1>
-        <a href="./View/movieList.php">‹’®/View</a>
+        <h1>ãµããƒ¼ã™ã¨ãºãƒ¼ã˜</h1>
+        <a href="./View/movieList.php">è¦–è´/View</a>
         <br>
-        <a href="./Receive/receiveList.php">ó’/Receive</a>
+        <a href="./Receive/receiveList.php">å—æ³¨/Receive</a>
         <br>
-        <a href="./Request/request.php">ˆË—Š/Request</a>
+        <a href="./Request/request.php">ä¾é ¼/Request</a>
         <br>
-        <a href="./Judge/judge.php">R¸/Judge</a>
+        <a href="./Judge/judge.php">å¯©æŸ»/Judge</a>
     </div>
 </body>
 </html>
