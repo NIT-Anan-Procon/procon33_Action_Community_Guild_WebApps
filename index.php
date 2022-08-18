@@ -1,3 +1,4 @@
+<?php header("Content-Type: text/html;charset=Shift_JIS");?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
