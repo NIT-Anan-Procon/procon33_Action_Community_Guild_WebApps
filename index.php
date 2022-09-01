@@ -1,3 +1,12 @@
+<?php
+    ini_set('display_errors', "On");
+
+    //.envを読み込むためのうんぬん    
+    require './vendor/autoload.php';
+    Dotenv\Dotenv::createImmutable(__DIR__)->load();
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,6 +17,11 @@
 </head>
 <body>
     <div>
+
+	<?php
+		echo $_ENV['hello'];
+		echo '書き換えました';
+	?>
         <h1>ふぁーすとぺーじ</h1>
         <a href="./View/movieList.php">視聴/View</a>
         <br>
