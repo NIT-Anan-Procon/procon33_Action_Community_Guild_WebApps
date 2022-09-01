@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+
+body {
+    font-family: 'Kiwi Maru', serif;
+    font-size: small;
+    background-color: #F6F3EE;
+    color: #453B3B;
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 30px;
+}
+.whole {
+    display: block;
+    margin: 0 auto;
+    height: 600px;
+    width: 100%;
+    border: 5px dashed #009672;
+}
+.team {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.team .icon {
+    margin: 0 auto;
+}
+.power {
+    display: flex;
+}
+.power div {
+    display: block;
+    margin: 0 auto;
+}
+.power-passione .data {
+    width: 40px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #F0738A;
+}
+.power-sulserio .data {
+    width: 40px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #53C5DE;
+}
+.power-musica .data {
+    width: 40px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #7ECD1A;
+}
+.power-sorpresa .data {
+    width: 40px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #FF95E1;
+}
+.title {
+    margin-top: 10px;
+    font-size: large;
+}
+.back {
+    background: none;
+    border: none;
+    margin-bottom: 5px;
+}

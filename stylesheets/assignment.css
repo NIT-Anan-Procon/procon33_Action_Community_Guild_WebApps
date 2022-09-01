@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+
+body {
+    font-family: 'Kiwi Maru', serif;
+    background-color: #F6F3EE;
+    color: #453B3B;
+}
+button {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+button img {
+    display: block;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label img {
+    opacity: 0.2;
+}
+input[type="radio"]:checked + label img {
+    opacity: 1;
+}
+.main {
+    display: block;
+    font-size: medium;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.text {
+    display: block;
+    text-align: center;
+    font-size: x-small;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.assign img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
+.assign-submit button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}

@@ -1,20 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
 
 body {
-    font-family: 'Kiwi Maru', serif;
     font-size: small;
     background-color: #F6F3EE;
-    color: #453B3B;
     text-align: center;
     margin-top: 30px;
 }
+.legend {
+    border: none;
+    background: none;
+    padding: 0;
+}
+.legend img {
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
+.total {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.total img {
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
 .whole {
+    border: 3px solid #AA68C7;
     background-color: #F6F3EE;
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+    border-radius: 20px;
     padding: 20px;
     width: 80%;
     margin: 20px auto;
 }
-
+.whole button {
+    font-family: 'Kiwi Maru', serif;
+    color: #453B3B;
+    border: none;
+    background: none;
+}
 .first {
     display: flex;
     font-size: medium;
@@ -48,11 +71,9 @@ body {
 .third .text_so {
     color: #FF95E1;
 }
-.forth video{
+.forth img{
+    width: 80%;
     border-radius: 20px;
-}
-.fifth {
-    margin-top: 20px;
 }
 .ant_passione {
     width: 50px;
@@ -83,22 +104,4 @@ body {
     to {
       background-position: -200px 0;
     }
-}
-body hr {
-    margin: 10px auto;
-}
-button {
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 10px 0;
-}
-button img {
-    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
-}
-.form-add-movie {
-    display: none;
-}
-.add-movie {
-    margin: 10px 0;
 }

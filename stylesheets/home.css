@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+
+body {
+    font-family: 'Kiwi Maru', serif;
+    font-size: small;
+    background-color: #F6F3EE;
+    color: #453B3B;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0;
+}
+.power-map {
+    margin-top: 20px;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+.power-map img {
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
+.team {
+    margin-top: 20px;
+    border: none;
+    background: none;
+}
+.team img {
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
+.member {
+    display: flex;
+    margin-top: 30px;
+    text-align: center;
+}
+.situation {
+    margin: 0 auto;
+    border: none;
+    background:none;
+}
+.ant {
+    margin: 0 auto;
+}
+.name {
+    margin: 0 auto;
+    text-align: center;
+}

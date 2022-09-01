@@ -1,74 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
 
-body{
+body {
     font-family: 'Kiwi Maru', serif;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 360px;
+    font-size: small;
+    background-color: #F6F3EE;
+    color: #453B3B;
 }
-
-
-/*---依頼名---*/
 .text {
-    font-size: large;
-    color: #FFC107;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
 }
-
-/*---依頼名---*/
+.text-top {
+    display: block;
+    text-align: center;
+    padding-bottom: 5px;
+}
 .form-request-name {
-    height: 2.4em;
-    width: 320px;
-    padding: 3px 15px;
+    font-family: 'Kiwi Maru', serif;
     font-size: large;
+    background-color: #F6F3EE;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border: 3px solid #009672;
     border-radius: 10px;
-    border: 3px solid #FFC107
-    
 }
 .form-request-name:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px #ff8b5f inset;
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
 }
-
-/*---依頼詳細文---*/
 .form-request-detail {
-    width: 320px;
-    height: 100px;
-    font-size: 16px;
-    padding: 10px 15px;
+    font-family: 'Kiwi Maru', serif;
+    font-size: large;
+    background-color: #F6F3EE;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border: 3px solid #009672;
     border-radius: 10px;
-    border: 3px solid #FFC107;
-    transform: scale();
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    resize: vertical;
-    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    height: 200px;
 }
 .form-request-detail:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px #ff8b5f inset;
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
+.request-picture {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
+.checkbox{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+.request-picture-default {
+    display: none;
+}
+.form-request-submit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: none;
+    background: transparent;
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
 }
 
-/*---依頼ランク---*/
-/* ラジオボタンの○を消す */
+.ranks {
+    display: block;
+    text-align: center;
+}
+.label-request-rank img {
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
+}
+
 input[type="radio"] {
     display: none;
 }
-/* 画像の周りに隙間をあける */
 .label-request-rank img {
     margin: 3px;
     padding: 5px;
 }
-/* 未選択の場合、色を薄くする */
 input[type="radio"] + .label-request-rank img {
     opacity:0.2;
 }
-/* 選択済みの場合、色を濃くする */
 input[type="radio"]:checked + .label-request-rank img {
     opacity:1;
     animation: jello-horizontal 1s alternate both;
 }
-
 @keyframes jello-horizontal {
     0% {
       transform: scale3d(1, 1, 1);
@@ -91,69 +114,4 @@ input[type="radio"]:checked + .label-request-rank img {
     100% {
       transform: scale3d(1, 1, 1);
     }
-  }
-  
-
-/*---添付ファイル---*/
-input[type="file"] {
-    display: none;
 }
-.label-request-picture {
-    border: none;
-    margin: 0 0;
-    padding: 12px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #FFF;
-    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
-    transition: .4s;
-}
-.label-request-picture:hover {
-    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
-}
-.label-request-picture:active {
-    animation: wobble-hor-bottom 1s both;
-    animation: jello-horizontal 1s alternate both;
-}
-
-/*---送信ボタン---*/
-.form-request-submit {
-    margin: 0%;
-    border: none;
-    width: 100%;
-    padding: 15px 40px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #FFF;
-    background-image: linear-gradient(45deg, #b72bfd 0%, #ff2587 100%);
-    transition: .4s;
-}
-.form-request-submit:hover {
-    background-image: linear-gradient(45deg, #b72bfd 0%, #ff2587 100%);
-}
-.form-request-submit:active {
-    animation: jello-horizontal 1s alternate both;
-}
-@keyframes wobble-hor-bottom {
-    0%,
-    100% {
-      transform: translateX(0%);
-      transform-origin: 50% 50%;
-    }
-    15% {
-      transform: translateX(-30px) rotate(-6deg);
-    }
-    30% {
-      transform: translateX(15px) rotate(6deg);
-    }
-    45% {
-      transform: translateX(-15px) rotate(-3.6deg);
-    }
-    60% {
-      transform: translateX(9px) rotate(2.4deg);
-    }
-    75% {
-      transform: translateX(-6px) rotate(-1.2deg);
-    }
-  }
-  

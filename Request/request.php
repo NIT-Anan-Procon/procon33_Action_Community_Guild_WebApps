@@ -8,40 +8,51 @@
     <title>REQUEST SCREEN</title>
 </head>
 <body>
-    <form action="#" method="post" enctype="multipart/form-data">
-        <p>
-            <span class="text">REQUEST NAME</span>
-            <input type="text" id="request-name" name="request-name" class="form-request-name">
-        </p>
-        <p>
-            <span class="text">REQUEST RANK</span>
-        </p>
-        <p>
-            <input id="A" type="radio" name="request-rank" class="form-request-rank" value="A" checked="checked">
-            <label for="A" class="label-request-rank"><img src="../images/icon_rank_A.svg" width="40" height="40"></label>
-            <input id="B" type="radio" name="request-rank" class="form-request-rank" value="B">
-            <label for="B" class="label-request-rank"><img src="../images/icon_rank_B.svg" width="40" height="40"></label>
-            <input id="C" type="radio" name="request-rank" class="form-request-rank" value="C">
-            <label for="C" class="label-request-rank"><img src="../images/icon_rank_C.svg" width="40" height="40"></label>
-            <input id="D" type="radio" name="request-rank" class="form-request-rank" value="D">
-            <label for="D" class="label-request-rank"><img src="../images/icon_rank_D.svg" width="40" height="40"></label>
-            <input id="E" type="radio" name="request-rank" class="form-request-rank" value="E">
-            <label for="E" class="label-request-rank"><img src="../images/icon_rank_E.svg" width="40" height="40"></label>
-        </p>
-        <p>
-            <span class="text">DETAIL</span>
-            <textarea type="comment" id="request-detail" name="request-detail" class="form-request-detail"></textarea>
-        </p>
-        <br>
-        <p class="label-request-picture">
-            <label>
-                PICTURE
-                <input type="file" id="request-picture" name="request-picture" class="form-request-picture">
-            </label>
-        </p>
-        <p>
-            <br><input type="submit" id="request-submit" name="request-submit" class="form-request-submit" value="SUBMIT">
-        </p>
+
+    <form action="sending.php" method="post" enctype="multipart/form-data">
+        <div class="text-top">依頼名を入力するアリ</div>
+        <input type="text" id="request-name" name="request_name" class="form-request-name">
+
+        <div class="text">依頼名ランクを選択するアリ</div>
+        <div class="ranks">
+        <input id="A" type="radio" name="rank" class="form-request-rank" value="A" checked="checked">
+        <label for="A" class="label-request-rank">
+            <img src="../images/icon_rank_A.svg" width="40" height="40">
+        </label>
+        <input id="B" type="radio" name="rank" class="form-request-rank" value="B">
+        <label for="B" class="label-request-rank">
+            <img src="../images/icon_rank_B.svg" width="40" height="40">
+        </label>
+        <input id="C" type="radio" name="rank" class="form-request-rank" value="C">
+        <label for="C" class="label-request-rank">
+            <img src="../images/icon_rank_C.svg" width="40" height="40">
+        </label>
+        <input id="D" type="radio" name="rank" class="form-request-rank" value="D">
+        <label for="D" class="label-request-rank">
+            <img src="../images/icon_rank_D.svg" width="40" height="40">
+        </label>
+        <input id="E" type="radio" name="rank" class="form-request-rank" value="E">
+        <label for="E" class="label-request-rank">
+            <img src="../images/icon_rank_E.svg" width="40" height="40">
+        </label>
+        </div>
+
+        <div class="text">依頼の詳細を入力するアリ</div>
+        <textarea type="comment" id="request-detail" name="detail" class="form-request-detail"></textarea>
+
+        <input type="file" id="request-picture" name="picture" class="request-picture-default">
+        <label for="request-picture" name="request-picture">
+            <img src="../images/add_picture.svg" width="250" class="request-picture">
+        </label>
+
+        <div class="checkbox">
+            <input type="checkbox" id="public" name="public">
+            <label for="public">全体公開にするアリか?</label>
+        </div>
+
+        <button type="submit" class="form-request-submit">
+            <img src="../images/send_request.svg" width="250">
+        </button>
     </form>
 </body>
 </html>

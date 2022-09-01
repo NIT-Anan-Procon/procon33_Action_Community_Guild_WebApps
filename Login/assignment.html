@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="ShiftJIS">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/assignment.css">
+    <title>assignment page</title>
+</head>
+<body>
+    <div class="main">あなたの配属する”巣”をお選びください</div>
+
+    <form action="../Login/result.html" method="post">
+        <div class="text">動画のために体を張れる情熱があるなら</div>
+        <input id="image_passione" type="radio" value="passione" name="image" checked>
+        <label for="image_passione" class="assign">
+            <img src="../images/passione.svg" alt="passione" width="250">
+        </label>
+        
+        <div class="text">編集を多用して高クオリティを目指すなら</div>
+        <input id="image_sulserio" type="radio" value="sulserio" name="image">
+        <label for="image_sulserio" class="assign">
+            <img src="../images/sulserio.svg" alt="sulserio" width="250">
+        </label>
+
+        <div class="text">音楽方面の動画を投稿したいなら</div>
+        <input id="image_musica" type="radio" value="musica" name="image">
+        <label for="image_musica" class="assign">
+            <img src="../images/musica.svg" alt="musica" width="250">
+        </label>
+
+        <div class="text">人のためのサプライズ動画を投稿したいなら</div>
+        <input id="image_sorpresa" type="radio" value="sorpresa" name="image">
+        <label for="image_sorpresa" class="assign">
+            <img src="../images/sorpresa.svg" alt="sorpresa" width="250">
+        </label>
+
+        <div class="assign-submit">
+            <button type="submit"><img src="../images/check.svg" alt="送信" width="30"></button>
+        </div>
+    </form>
+    
+</body>
+</html>
