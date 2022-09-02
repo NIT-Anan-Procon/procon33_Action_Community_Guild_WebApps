@@ -48,6 +48,10 @@ body {
 .third .text_so {
     color: #FF95E1;
 }
+.forth {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
 .forth video{
     border-radius: 20px;
 }
