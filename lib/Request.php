@@ -1,6 +1,6 @@
 <?php
     require './vendor/autoload.php';
-    Dotenv\Dotenv::createImmutable(DIR)->load();
+    Dotenv\Dotenv::createImmutable(__DIR__)->load();
 
     class Request{
         protected $dbh;

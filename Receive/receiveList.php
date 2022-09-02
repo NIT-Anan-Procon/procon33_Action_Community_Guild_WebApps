@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <script>
     let dataList = [
     {
@@ -58,6 +57,5 @@
         <img src="../images/receive_legend.svg" width="250">
     </button>
     <div id="requestList">なにもJSから受け取ってないよ</div>
->>>>>>> 9b1334bd4c27d5abfa08144dd196510c49ef839c
 </body>
 </html>
