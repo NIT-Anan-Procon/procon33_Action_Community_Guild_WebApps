@@ -30,19 +30,19 @@ function getRequestList(){
             infoHtml += '<div class="third">';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_passione"></div>';
-                    infoHtml += '<div class="text_pa">Å~' + data.numsAnts[0] + '</div>';
+                    infoHtml += '<div class="text_pa">x' + data.numsAnts[0] + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_sulserio"></div>';
-                    infoHtml += '<div class="text_su">Å~' + data.numsAnts[1] + '</div>';
+                    infoHtml += '<div class="text_su">x' + data.numsAnts[1] + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_musica"></div>';
-                    infoHtml += '<div class="text_mu">Å~' + data.numsAnts[2] + '</div>';
+                    infoHtml += '<div class="text_mu">x' + data.numsAnts[2] + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_sorpresa"></div>';
-                    infoHtml += '<div class="text_so">Å~' + data.numsAnts[3] + '</div>';
+                    infoHtml += '<div class="text_so">x' + data.numsAnts[3] + '</div>';
                 infoHtml += '</div>';
             infoHtml += '</div>';
             infoHtml += '<div class="forth">';
@@ -100,19 +100,19 @@ function getLegendList(){
             infoHtml += '<div class="third">';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_passione"></div>';
-                    infoHtml += '<div class="text_pa">Å~' + data.numsAnts[0] + '</div>';
+                    infoHtml += '<div class="text_pa">ÔøΩ~' + data.numsAnts[0] + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_sulserio"></div>';
-                    infoHtml += '<div class="text_su">Å~' + data.numsAnts[1] + '</div>';
+                    infoHtml += '<div class="text_su">ÔøΩ~' + data.numsAnts[1] + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_musica"></div>';
-                    infoHtml += '<div class="text_mu">Å~' + data.numsAnts[2] + '</div>';
+                    infoHtml += '<div class="text_mu">ÔøΩ~' + data.numsAnts[2] + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_sorpresa"></div>';
-                    infoHtml += '<div class="text_so">Å~' + data.numsAnts[3] + '</div>';
+                    infoHtml += '<div class="text_so">ÔøΩ~' + data.numsAnts[3] + '</div>';
                 infoHtml += '</div>';
             infoHtml += '</div>';
             infoHtml += '<div class="forth">';
@@ -138,7 +138,6 @@ function getLegendList(){
     }
 }
 
-//NEW!!
 function getRequestInfoForJudge(){
     let infoHtml = '';
     infoHtml += '<div class="request-whole" id="request-whole">';
@@ -173,25 +172,25 @@ function getRequestInfoForJudge(){
             infoHtml += '<div class="niconico">';
                 infoHtml += '<div>';
                     infoHtml += '<img class="niconico_passione" src="../images/niconico_passione.svg" width="30">';
-                    infoHtml += '<div class="text_pa">Å~' + niconico.passione + '</div>';
+                    infoHtml += '<div class="text_pa">x' + niconico.passione + '</div>';
                 infoHtml += '</div>';
             infoHtml += '</div>';
             infoHtml += '<div class="niconico">';
                 infoHtml += '<div>';
                     infoHtml += '<img class="niconico_sulserio" src="../images/niconico_sulserio.svg" width="30">';
-                    infoHtml += '<div class="text_su">Å~' + niconico.sulserio + '</div>';
+                    infoHtml += '<div class="text_su">x' + niconico.sulserio + '</div>';
                 infoHtml += '</div>';
             infoHtml += '</div>';
             infoHtml += '<div class="niconico">';
                 infoHtml += '<div>';
                     infoHtml += '<img class="niconico_musica" src="../images/niconico_musica.svg" width="30">';
-                    infoHtml += '<div class="text_mu">Å~' + niconico.musica + '</div>';
+                    infoHtml += '<div class="text_mu">x' + niconico.musica + '</div>';
                 infoHtml += '</div>';
             infoHtml += '</div>';
             infoHtml += '<div class="niconico">';
                 infoHtml += '<div>';
                     infoHtml += '<img class="niconico_sorpresa" src="../images/niconico_sorpresa.svg" width="30">';
-                    infoHtml += '<div class="text_so">Å~' + niconico.sorpresa + '</div>';
+                    infoHtml += '<div class="text_so">x' + niconico.sorpresa + '</div>';
                 infoHtml += '</div>';
             infoHtml += '</div>';
         infoHtml += '</div>';
@@ -205,7 +204,6 @@ function getRequestInfoForJudge(){
     console.log(infoHtml);
     document.getElementById("request-info").innerHTML = infoHtml;
 
-    //ÉâÉìÉNÇ…çáÇÌÇπÇƒÉ{Å[É_Å[ÇÃêFÇïœÇ¶ÇÈ
     var elem = document.getElementById("request-whole");
     switch(request.rank) {
         case 0: elem.style = "border: 3px solid #AA68C7;"; break;
@@ -216,7 +214,6 @@ function getRequestInfoForJudge(){
     }
 }
 
-//NEW!!(çXêV)
 function getRequestInfoForReceive(){
    
     let infoHtml = ''
@@ -249,19 +246,19 @@ function getRequestInfoForReceive(){
             infoHtml += '<div class="ants">';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_passione"></div>';
-                    infoHtml += '<div class="text_pa">Å~' + 1 + '</div>';
+                    infoHtml += '<div class="text_pa">x' + 1 + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_sulserio"></div>';
-                    infoHtml += '<div class="text_su">Å~' + 2 + '</div>';
+                    infoHtml += '<div class="text_su">x' + 2 + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_musica"></div>';
-                    infoHtml += '<div class="text_mu">Å~' + 2 + '</div>';
+                    infoHtml += '<div class="text_mu">x' + 2 + '</div>';
                 infoHtml += '</div>';
                 infoHtml += '<div>';
                     infoHtml += '<div class="ant_sorpresa"></div>';
-                    infoHtml += '<div class="text_so">Å~' + 1 + '</div>';
+                    infoHtml += '<div class="text_so">x' + 1 + '</div>';
                 infoHtml += '</div>';
             infoHtml += '</div>';
         infoHtml += '</div>';
@@ -331,7 +328,6 @@ function getReceive(){
             infoHtml += "</div>";
         infoHtml += '</div>';
         infoHtml += '<div class="third">';
-
             infoHtml += '<div>';
                     infoHtml += '<div class="ant_passione"></div>';
                     infoHtml += '<div class="text_pa">x';
@@ -361,18 +357,15 @@ function getReceive(){
             infoHtml +='</div>';
         infoHtml += '</div>';
 
-        
-        for(const movie of data.movies){
-            infoHtml += '<div class="forth">';
+        infoHtml += '<div class="forth">';
+            for(const movie of data.movies){
                 infoHtml += '<video class="movie" width="100%" height="" poster="../images/poster_passione.png" controls>';
                     infoHtml += '<source src="../videos/'
                         infoHtml += movie;
                     infoHtml += '" type="video/mp4">'
                 infoHtml += '</video>';
-            infoHtml += '</div>'
-            infoHtml += '<br>'
-        }
-
+            }
+        infoHtml += '</div>'
         infoHtml += '<div class="fifth">';
             infoHtml += '<div class="detail">';
                 infoHtml += data.detail;

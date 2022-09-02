@@ -30,8 +30,10 @@
     <div id="request-info"></div>
 
     <form class="judge-buttons" id = "judges" method = "post">
-        <input type="radio" name="nicodame" value="nico">
-            <img src="../images/niconico.svg" alt="niconico" width="50">
+        <input id="niconico" class="form-niconico-button" type="radio" name="nicodame" value="nico" checked>
+            <label for="niconico" class="label-niconico-button">
+                <img src="../images/niconico.svg" alt="niconico" width="50">
+            </label>
         </input>
         <button type="submit" name="submit" value="check">
             <img src="../images/check.svg" alt="check" width="30">
@@ -39,8 +41,10 @@
         <button type="submit" name="submit" value="refresh">
             <img src="../images/refresh.svg" alt="refresh" width="30">
         </button>
-        <input type="radio" name="nicodame" value="dame">
-            <img src="../images/damedame.svg" alt="damedame" width="50">
+        <input id="damedame" class="form-damedame-button" type="radio" name="nicodame" value="dame">
+            <label for="damedame" class="label-damedame-button">
+                <img src="../images/damedame.svg" alt="damedame" width="50">
+            </label>
         </input>
     </form>
 
