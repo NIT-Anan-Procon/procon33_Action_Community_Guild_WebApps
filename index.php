@@ -2,9 +2,9 @@
     ini_set('display_errors', "On");
 
     //.envを読み込むためのうんぬん    
-    require './vendor/autoload.php';
-    Dotenv\Dotenv::createImmutable(__DIR__)->load();
-?>
+    //require './vendor/autoload.php';
+    //Dotenv\Dotenv::createImmutable(__DIR__)->load();
+?> 
 
 
 <!DOCTYPE html>
@@ -19,17 +19,20 @@
     <div>
 
 	<?php
-		echo $_ENV['hello'];
 		echo '書き換えました';
 	?>
         <h1>ふぁーすとぺーじ</h1>
-        <a href="./View/movieList.php">視聴/View</a>
+        <a href="./Login/start.html">最初の画面</a>
         <br>
-        <a href="./Receive/receiveList.php">受注/Receive</a>
+        <a href="./Login/assignment.html">配属の画面</a>
         <br>
-        <a href="./Request/request.php">依頼/Request</a>
+        <a href="./Home/home.php">ホーム画面</a>
         <br>
-        <a href="./Judge/judge.php">審査/Judge</a>
+        <a href="./Request/request.php">依頼画面</a>
+        <br>
+        <a href="./Judge/judge.php">審査画面</a>
+        <br>
+        <a href="./Receive/receiveList.php">受注画面</a>
     </div>
 </body>
 </html>
