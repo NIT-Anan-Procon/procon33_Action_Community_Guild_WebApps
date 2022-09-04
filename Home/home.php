@@ -4,14 +4,16 @@
     }
 
     let members = [
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリ次郎宗次時貞"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"モハメド アリ"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"ありよりのアリ"}
+        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリ次郎時貞宗次"},
+        {situationImage:"example.svg",antImage:"ant_first.svg",author:"モハメドン・アリ"},
+        {situationImage:"example.svg",antImage:"ant_first.svg",author:"ありよりのぉアリ"},
+        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリアナグランデ"},
+        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリーヴェデルチ"},
+        {situationImage:"example.svg",antImage:"ant_first.svg",author:"ありまおんせん！"},
+        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリあけアリーな"}
     ]
-
-
 </script>
-
+<!--authorは8文字に限定しようと思うポケモンみたいに-->
 
 <!DOCTYPE html>
 <html lang="ja">

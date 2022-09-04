@@ -1,9 +1,9 @@
 <script>
     let power = {
         passione:2,
-        sulserio:8,
+        sulserio:10,
         musica:1,
-        sorpresa:5
+        sorpresa:8
     }
 </script>
 
