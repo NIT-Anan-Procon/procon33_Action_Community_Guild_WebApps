@@ -10,7 +10,6 @@
 <body>
     <h1 id="status">
         <?php
-            echo "送信中<br>";
             require_once __DIR__."/../lib/Request.php";
         
             $req = new Request();
