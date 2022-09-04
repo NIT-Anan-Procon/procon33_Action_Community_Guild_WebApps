@@ -23,7 +23,7 @@
             }
         }
 
-        function sendRequest($user_id,$request_name,$detail,$rank){//image‚Í‚Æ‚è‚ÜœŠO
+        function sendRequest($user_id,$request_name,$detail,$rank){//imageï¿½Í‚Æ‚ï¿½Üï¿½ï¿½O
 
             $sql = "INSERT INTO {$this->table}(user_id,request_name,detail,rank)
                 VALUES
@@ -31,7 +31,7 @@
             ";
 
             try{
-                $stmt = $this->dbn->prepare($sql);
+                $stmt = $this->dbh->prepare($sql);
                 $stmt->bindValue(':user_id',$user_id);
                 $stmt->bindValue(':request_name',$request_name);
                 $stmt->bindValue(':detail',$detail);
