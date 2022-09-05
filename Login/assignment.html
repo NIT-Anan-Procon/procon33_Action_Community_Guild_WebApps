@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="ShiftJIS">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../stylesheets/assignment.css">
     <title>assignment page</title>
 </head>
-<body>
-    <div class="main">‚ ‚È‚½‚Ì”z‘®‚·‚éh‘ƒh‚ğ‚¨‘I‚Ñ‚­‚¾‚³‚¢</div>
+<body onload="name();">
+    <div class="main">ã‚ãªãŸã®é…å±ã™ã‚‹â€å·£â€ã‚’ãŠé¸ã³ãã ã•ã„</div>
 
-    <form action="../Login/result.html" method="post">
-        <div class="text">“®‰æ‚Ì‚½‚ß‚É‘Ì‚ğ’£‚ê‚éî”M‚ª‚ ‚é‚È‚ç</div>
-        <input id="image_passione" type="radio" value="passione" name="image" checked>
+    <form action="../Login/result.php" method="post">
+        <div class="text">å‹•ç”»ã®ãŸã‚ã«ä½“ã‚’å¼µã‚Œã‚‹æƒ…ç†±ãŒã‚ã‚‹ãªã‚‰</div>
+        <input id="image_passione" type="radio" value="0" name="team" checked>
         <label for="image_passione" class="assign">
             <img src="../images/passione.svg" alt="passione" width="250">
         </label>
         
-        <div class="text">•ÒW‚ğ‘½—p‚µ‚Ä‚ƒNƒIƒŠƒeƒB‚ğ–Úw‚·‚È‚ç</div>
-        <input id="image_sulserio" type="radio" value="sulserio" name="image">
+        <div class="text">ç·¨é›†ã‚’å¤šç”¨ã—ã¦é«˜ã‚¯ã‚ªãƒªãƒ†ã‚£ã‚’ç›®æŒ‡ã™ãªã‚‰</div>
+        <input id="image_sulserio" type="radio" value="1" name="team">
         <label for="image_sulserio" class="assign">
             <img src="../images/sulserio.svg" alt="sulserio" width="250">
         </label>
 
-        <div class="text">‰¹Šy•û–Ê‚Ì“®‰æ‚ğ“Še‚µ‚½‚¢‚È‚ç</div>
-        <input id="image_musica" type="radio" value="musica" name="image">
+        <div class="text">éŸ³æ¥½æ–¹é¢ã®å‹•ç”»ã‚’æŠ•ç¨¿ã—ãŸã„ãªã‚‰</div>
+        <input id="image_musica" type="radio" value="2" name="team">
         <label for="image_musica" class="assign">
             <img src="../images/musica.svg" alt="musica" width="250">
         </label>
 
-        <div class="text">l‚Ì‚½‚ß‚ÌƒTƒvƒ‰ƒCƒY“®‰æ‚ğ“Še‚µ‚½‚¢‚È‚ç</div>
-        <input id="image_sorpresa" type="radio" value="sorpresa" name="image">
+        <div class="text">äººã®ãŸã‚ã®ã‚µãƒ—ãƒ©ã‚¤ã‚ºå‹•ç”»ã‚’æŠ•ç¨¿ã—ãŸã„ãªã‚‰</div>
+        <input id="image_sorpresa" type="radio" value="3" name="team">
         <label for="image_sorpresa" class="assign">
             <img src="../images/sorpresa.svg" alt="sorpresa" width="250">
         </label>
 
+        
+        <span id="hidden">
+            æ›¸ãæ›ãˆã‚Œã¦ãªã„
+        </span>
+
         <div class="assign-submit">
-            <button type="submit"><img src="../images/check.svg" alt="‘—M" width="30"></button>
+            <button type="submit"><img src="../images/check.svg" alt="é€ä¿¡" width="30"></button>
         </div>
     </form>
-    
+
+
+<script>
+function getName() {
+    var element1 = getElement(1, (Math.floor(Math.random() * 11)));
+    var element2 = getElement(2, (Math.floor(Math.random() * 11)));
+    var element3 = getElement(3, (Math.floor(Math.random() * 11)));
+    return element1 + element2 + element3;
+}
+function getElement(n,element) {
+    const array1 = ["ã‚¢ãƒª","ã‚¢ã‚±","ã‚­ãƒ³","ã‚¸ãƒ³","ã‚¨ã‚¾","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥"];
+    const array2 = ["ã‚¢ãƒª","ã‚¢ãƒŠ","ã‚¹ãƒˆ","ã‚°ãƒ³","ã‚¹ãƒˆ","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥"];
+    const array3 = ["ã‚¢ãƒªãƒ³","ã‚°ãƒ©ãƒ³ãƒ‡","ç‚­æ²»éƒ","æŸ´ä¸‰éƒ","ãƒ†ãƒ¬ã‚¹","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥","ãƒ‹ãƒ¥"];
+    switch(n) {
+        case 1:
+            return array1[element];
+            break;
+        case 2:
+            return array2[element];
+            break;
+        case 3:
+            return array3[element];
+            break;
+        default:
+            return 0;
+    }
+}
+
+function name(){
+       	info = '<input name="name" value="'+getName()+'">';
+       	console.log(info);
+	document.getElementById("hidden").innerHTML=info;
+} 
+</script>
 </body>
 </html>

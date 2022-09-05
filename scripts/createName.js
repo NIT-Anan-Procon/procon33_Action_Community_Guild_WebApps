@@ -22,3 +22,9 @@ function getElement(n,element) {
             return 0;
     }
 }
+
+function name(){
+       	info = '<input id="image" value="'+getName()+'">';
+       	console.log(info);
+	document.getElementById("hidden").innerHTML=info;
+}
