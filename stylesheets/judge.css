@@ -79,3 +79,49 @@ body {
     margin: 0 auto;
     filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
 }
+.form-niconico-button {
+    display: none;
+}
+.form-damedame-button {
+    display: none;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + .label-niconico-button img {
+    opacity:0.2;
+}
+input[type="radio"]:checked + .label-niconico-button img {
+    opacity:1;
+    animation: jello-horizontal 1s alternate both;
+}
+input[type="radio"] + .label-damedame-button img {
+    opacity:0.2;
+}
+input[type="radio"]:checked + .label-damedame-button img {
+    opacity:1;
+    animation: jello-horizontal 1s alternate both;
+}
+@keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+}
