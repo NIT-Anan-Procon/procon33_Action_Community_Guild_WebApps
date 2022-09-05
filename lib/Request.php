@@ -1,6 +1,6 @@
 <?php
-    require './vendor/autoload.php';
-    Dotenv\Dotenv::createImmutable(__DIR__)->load();
+    require './../vendor/autoload.php';
+    Dotenv\Dotenv::createImmutable(__DIR__."/../")->load();
 
     class Request{
         protected $dbh;
@@ -23,11 +23,11 @@
             }
         }
 
-        function sendRequest($user_id,$request_name,$detail,$rank){//image�͂Ƃ�܏��O
+        function sendRequest($user_id,$request_name,$detail,$rank){
 
-            $sql = "INSERT INTO {$this->table}(user_id,request_name,detail,rank)
+            $sql = "INSERT INTO {$this->table}(user_id,request_name,detail,rank,image_path)
                 VALUES
-                    (:user_id,:request_name,:detail,:rank);
+                    (:user_id,:request_name,:detail,:rank,:image_path);
             ";
 
             try{
@@ -36,6 +36,7 @@
                 $stmt->bindValue(':request_name',$request_name);
                 $stmt->bindValue(':detail',$detail);
                 $stmt->bindValue(':rank',$rank);
+                $stmt->bindValue(':image_path', "");
                 $stmt->execute();
             }
             catch(PDOException $e){

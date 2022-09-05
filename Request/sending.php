@@ -10,15 +10,18 @@
 <body>
     <h1 id="status">
         <?php
+            echo "こんにちは";
+            
+            ini_set('display_errors', 1);
             require_once __DIR__."/../lib/Request.php";
         
             $req = new Request();
-            
+            echo "初期化したよ";
             $user_id = 1;
 
             $request_name = $_POST["request_name"];
             $detail = $_POST["detail"];
-            $rank;
+            $rank=0;
             if($_POST["rank"]=="A")$rank=0;
             if($_POST["rank"]=="B")$rank=1;
             if($_POST["rank"]=="C")$rank=2;
@@ -26,6 +29,7 @@
             if($_POST["rank"]=="E")$rank=4;
 
             $req -> sendRequest($user_id,$request_name,$detail,$rank);
+            echo "こんばんは";
             echo "送信完了";
         ?>
     </h1>
