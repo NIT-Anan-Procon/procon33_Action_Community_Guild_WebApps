@@ -29,7 +29,13 @@
         $user->sendUser($name,$team_id);
 
         echo '<div class="main">巣への加入が完了されたアリ</div>';
+        $data = $user->getUserID();
+
+        setcookie("user_ID",(string)$data[0],time()+60*60,"/");
+        echo "クッキーに入ったユーザーID:".$_COOKIE["user_ID"];
     ?>
+
+    <a href="../Request/request.php">リクエストかくとこ</a>
     
 </body>
 </html>

@@ -45,5 +45,11 @@
                 exit();
             }
         }
+
+        // function getRequestForJudge(){
+        //     $sql = "SELECT request_name,detail,rank,image_path,team_id,user_name
+        //     FROM requests LEFT OUTER JOIN users ON requests.user_id = users.user_id
+        //     WHERE "
+        // }
     }
 ?>

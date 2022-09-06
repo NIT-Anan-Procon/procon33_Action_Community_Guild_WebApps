@@ -31,7 +31,7 @@
             ";
 
             try{
-                $stmt = $this->dbh->prepare($sql);-
+                $stmt = $this->dbh->prepare($sql);
                 $stmt->bindValue(':name',$name);
                 $stmt->bindValue(':team_id',$team_id);
                 $stmt->bindValue(':password',"1111");
@@ -43,5 +43,61 @@
                 exit();
             }
         }
+
+        function getUserID(){
+            $sql = "SELECT LAST_INSERT_ID();";
+
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $res = $stmt->execute();
+                if($res){
+                    $data = $stmt->fetch();
+                    
+                    return $data;
+                }
+            }catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+                echo $e->getMessage();
+                exit();
+            }
+        }
+
+        function getTeamID($user_id){
+            $sql = "SELECT team_id FROM users WHERE user_id=:user_id";
+
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $stmt -> bindValue(':user_id',$user_id);
+                $res = $stmt->execute();
+                if($res){
+                    $data = $stmt->fetch();
+                    return $data[0];
+                }
+            }catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+                echo $e->getMessage();
+                exit();
+            }
+            
+        }
+
+        function getUserNameList($team_id){
+            $sql = "SELECT name FROM users WHERE team_id=:team_id";
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue(':team_id',$team_id);
+
+                $res = $stmt -> execute();
+                if($res){
+                    $data = $stmt->fetchAll();
+                    return $data;
+                }
+            }catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+                echo $e->getMessage();
+                exit();
+            }
+        }
+
     }
 ?>

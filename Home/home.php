@@ -4,15 +4,40 @@
     }
 
     let members = [
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリ次郎時貞宗次"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"モハメドン・アリ"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"ありよりのぉアリ"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリアナグランデ"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリーヴェデルチ"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"ありまおんせん！"},
-        {situationImage:"example.svg",antImage:"ant_first.svg",author:"アリあけアリーな"}
     ]
 </script>
+
+<?php 
+        
+        ini_set('display_errors', 1);
+        require_once __DIR__."/../lib/User.php";
+
+        $user = new User();
+
+        $user_id = $_COOKIE["user_ID"];
+        $team_id = $user->getTeamID($user_id);
+        
+        $data = $user->getUserNameList($team_id);
+        $json_array = json_encode($data);
+        
+    ?>
+    <script>
+        user['team'] =<?php echo $team_id; ?>;
+        let json_array = <?php echo $json_array; ?>;
+        
+        console.log(json_array);
+        for(var element in json_array){
+            console.log(element+":"+json_array[element]["0"]);
+            let member = {
+                situationImage:"example.svg",
+                antImage:"ant_first.svg",
+                author:json_array[element]["0"]
+            }
+            members.push(member);
+            
+        }
+
+    </script>
 <!--authorは8文字に限定しようと思うポケモンみたいに-->
 
 <!DOCTYPE html>
@@ -36,6 +61,9 @@
             <img src="../images/passione.svg" width="250">   
         </button>
     </div>
+
+    
+
     <div id="members">
         <div class="member">
             <button class="situation">
