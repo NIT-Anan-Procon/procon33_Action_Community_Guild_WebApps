@@ -44,10 +44,50 @@
                 }
             }
             catch(PDOException $e){
-
+                header('Error:'.$e->getMessage());
+                
+                exit();
             }
 
 
+        }
+
+        function getCounts($request_id){
+            $data;
+            $data[0] = $this->getJudgementCount($request_id,'0');
+            $data[1] = $this->getJudgementCount($request_id,'1');
+            $data[2] = $this->getJudgementCount($request_id,'2');
+            $data[3] = $this->getJudgementCount($request_id,'3');
+            var_dump($data);
+            return $data;
+        }
+
+        function getJudgementCount($request_id,$team_id){
+            $sql = "SELECT count(judgement='1' or NULL) 
+            FROM (
+                SELECT judgement
+                FROM judgements 
+                INNER JOIN users 
+                ON judgements.user_id = users.user_id 
+                WHERE request_id = :request_id and team_id = :team_id
+                ) 
+            as requestJudgements;";
+
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue(':request_id',$request_id);
+                $stmt->bindValue(':team_id',$team_id);
+                $res = $stmt->execute();
+                if($res){
+                    $data = $stmt->fetch();
+                    return $data[0];
+                }
+            }
+            catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+                
+                exit();
+            }
         }
 
         function sendJudgement($request_id,$user_id,$judgement){

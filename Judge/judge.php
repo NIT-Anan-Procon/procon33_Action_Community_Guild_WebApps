@@ -34,6 +34,7 @@
     $t = $Judge->getNotJudgedRequestID($_COOKIE["user_ID"]);
     $request_id = $t["0"];
     $data = $req->getRequest($request_id);
+    $counts = $Judge->getCounts($request_id);
 
 ?>
 
@@ -47,10 +48,10 @@
     }
     //各ニコニコ数をDBから取ってくる
     let niconico = {
-        passione : 3,
-        sulserio : 2,
-        musica   : 1,
-        sorpresa : 2
+        passione : <?php echo $counts[0]?>,
+        sulserio : <?php echo $counts[1]?>,
+        musica   : <?php echo $counts[2]?>,
+        sorpresa : <?php echo $counts[3]?>
     }
 </script>
 
