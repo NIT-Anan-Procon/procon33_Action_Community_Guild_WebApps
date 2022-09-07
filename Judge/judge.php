@@ -1,9 +1,48 @@
+
+<?php 
+    ini_set('display_errors', 1);
+    require_once __DIR__."/../lib/Request.php";
+    require_once __DIR__."/../lib/Judgement.php";
+    $Judge = new Judgement();
+    $req = new Request();
+        
+        if(isset($_POST['submit'])){
+            // echo '<h1>データベースに送られるデータ</h1>';
+            $judgement;
+            if($_POST['submit']=="check" && isset($_POST['nicodame'])){
+                $judgement = 1;
+                if($_POST['nicodame']=='dame'){
+                    $judgement = -1;
+                }
+            }
+            else{
+                $judgement = 0;
+            }
+
+            // echo "request_id = ".$_POST["request_id"];
+            // echo "user_id = ".$_COOKIE["user_ID"];
+            // echo "judgement = ".$judgement;
+                      
+           
+            $Judge->sendJudgement($_POST["request_id"],$_COOKIE["user_ID"],$judgement);
+        }
+    ?>
+
+<?php
+
+   
+    $t = $Judge->getNotJudgedRequestID($_COOKIE["user_ID"]);
+    $request_id = $t["0"];
+    $data = $req->getRequest($request_id);
+
+?>
+
 <script>
     let request = {
-        rank : 4,
-        request_name : "漫画の料理を完全再現してみた!",
-        detail:"みんなで漫画「トリコ」に出てくるジュエルミートのような料理を完全再現しましょう！めちゃくちゃ頑張るのもヨシ！適当に作るのもヨシ！ダークマターが出来上がっても笑いあいましょう！ただし！火事にはならないように...",
-        user_name:"アリ小僧",
+        rank : <?php echo $data["rank"];?>,
+        request_name : <?php echo '"'.$data["request_name"].'"'; ?>,
+        detail: <?php echo '"'.$data["detail"].'"'; ?>,
+        user_name: <?php echo '"'.$data["name"].'"'; ?>,
         picture:"kemono.jpg",
     }
     //各ニコニコ数をDBから取ってくる
@@ -14,7 +53,6 @@
         sorpresa : 2
     }
 </script>
-
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -46,34 +84,10 @@
                 <img src="../images/damedame.svg" alt="damedame" width="50">
             </label>
         </input>
+
+        <input type="hidden" name="request_id" value="<?php echo $request_id ?>">
     </form>
 
-    <?php 
-        
-        if(isset($_POST['submit'])){
-            echo '<h1>データベースに送られるデータ</h1>';
-            
-            if($_POST['submit']=="check" && isset($_POST['nicodame'])){
-                
-            }
-            else{
-                $_POST['nicodame'] = NULL;
-            }
-            echo "<h2>nicodame:".$_POST['nicodame']."</h2>";
-            echo "<h2>submit:".$_POST['submit']."</h2>";
-            ?>
-            <script type="text/javascript">
-                request = {
-                    rank : 4,
-                    request_name : "リクエストの更新をしたときにこいつを表示させたい",
-                    detail:"下に書いてあるのが、サーバーに送信された先ほどの依頼書の審査結果",
-                    user_name:"アリ職人",
-                    picture:"TomAndJerry.png",
-                }
-            </script>
-            <?php
-                      
-        }      
-    ?>
+    
 </body>
 </html>

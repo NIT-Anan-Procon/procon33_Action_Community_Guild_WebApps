@@ -2,9 +2,9 @@
     require './../vendor/autoload.php';
     Dotenv\Dotenv::createImmutable(__DIR__."/../")->load();
 
-    class Request{
+    class Judgement{
         protected $dbh;
-        protected $table = 'requests';
+        protected $table = 'judgements';
 
         public function __construct(){
             $dbname = $_ENV["db_name"];
@@ -18,53 +18,58 @@
                 ]);
             } catch (PDOException $e) {
                 header('Error:'.$e->getMessage());
-    
+                
                 exit();
             }
         }
 
-        function sendRequest($user_id,$request_name,$detail,$rank){
-
-            $sql = "INSERT INTO {$this->table}(user_id,request_name,detail,rank,image_path)
-                VALUES
-                    (:user_id,:request_name,:detail,:rank,:image_path);
+        function getNotJudgedRequestID($user_id){
+            $sql = "SELECT requests.request_id
+                FROM (SELECT * FROM judgements 
+                WHERE judgements.user_id = :user_id)
+                as userJudgements
+                RIGHT OUTER JOIN requests 
+                ON userJudgements.request_id = requests.request_id
+                WHERE judgement is NULL;
             ";
 
             try{
                 $stmt = $this->dbh->prepare($sql);
                 $stmt->bindValue(':user_id',$user_id);
-                $stmt->bindValue(':request_name',$request_name);
-                $stmt->bindValue(':detail',$detail);
-                $stmt->bindValue(':rank',$rank);
-                $stmt->bindValue(':image_path', "");
-                $stmt->execute();
-            }
-            catch(PDOException $e){
-                header('Error:'.$e->getMessage());
-
-                exit();
-            }
-        }
-
-        function getRequest($request_id){
-            $sql = "SELECT request_name,detail,rank,image_path,name
-            FROM requests INNER JOIN users ON requests.user_id = users.user_id
-            WHERE request_id = :request_id;";
-
-            try{
-                $stmt = $this->dbh->prepare($sql);
-                $stmt->bindValue(':request_id',$request_id);
                 $res = $stmt->execute();
                 if($res){
                     $data = $stmt->fetch();
                     
                     return $data;
                 }
-            }catch(Exception $e){
-                header('Error:'.$e->getMessage());
+            }
+            catch(PDOException $e){
 
+            }
+
+
+        }
+
+        function sendJudgement($request_id,$user_id,$judgement){
+            $sql = "INSERT INTO {$this->table}(request_id,user_id,judgement)
+                VALUES
+                    (:request_id,:user_id,:judgement)";
+            
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue(':request_id',$request_id);
+                $stmt->bindValue(':user_id',$user_id);
+                $stmt->bindValue(':judgement',$judgement);
+                $stmt->execute();
+            }
+            catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+                
                 exit();
             }
         }
+
+
     }
+
 ?>
