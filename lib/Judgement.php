@@ -58,7 +58,6 @@
             $data[1] = $this->getJudgementCount($request_id,'1');
             $data[2] = $this->getJudgementCount($request_id,'2');
             $data[3] = $this->getJudgementCount($request_id,'3');
-            var_dump($data);
             return $data;
         }
 
