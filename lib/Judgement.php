@@ -2,6 +2,8 @@
     require './../vendor/autoload.php';
     Dotenv\Dotenv::createImmutable(__DIR__."/../")->load();
 
+    require 'Request.php';
+
     class Judgement{
         protected $dbh;
         protected $table = 'judgements';
@@ -58,6 +60,8 @@
             $data[1] = $this->getJudgementCount($request_id,'1');
             $data[2] = $this->getJudgementCount($request_id,'2');
             $data[3] = $this->getJudgementCount($request_id,'3');
+
+            
             return $data;
         }
 
@@ -79,6 +83,10 @@
                 $res = $stmt->execute();
                 if($res){
                     $data = $stmt->fetch();
+                    if($data[0] >= 5){
+                        $req = new Request();
+                        $req->updateRequestCondition($request_id,$team_id,'1');
+                    }
                     return $data[0];
                 }
             }
@@ -88,6 +96,8 @@
                 exit();
             }
         }
+
+        
 
         function sendJudgement($request_id,$user_id,$judgement){
             $sql = "INSERT INTO {$this->table}(request_id,user_id,judgement)

@@ -66,5 +66,24 @@
                 exit();
             }
         }
+        function updateRequestCondition($request_id,$team_id,$condition){
+            $sql;
+            if($team_id = 0)$sql = "UPDATE {$this->table} SET condition_0 = :condition WHERE request_id = :request_id";
+            if($team_id = 1)$sql = "UPDATE {$this->table} SET condition_1 = :condition WHERE request_id = :request_id";
+            if($team_id = 2)$sql = "UPDATE {$this->table} SET condition_2 = :condition WHERE request_id = :request_id";
+            if($team_id = 3)$sql = "UPDATE {$this->table} SET condition_3 = :condition WHERE request_id = :request_id";
+
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue(':condition',$condition);
+                $stmt->bindValue(':request_id',$request_id);
+                $stmt->execute();
+            }
+            catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+
+                exit();
+            }
+        }
     }
 ?>

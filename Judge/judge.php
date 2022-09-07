@@ -1,7 +1,7 @@
 
 <?php 
     ini_set('display_errors', 1);
-    require_once __DIR__."/../lib/Request.php";
+
     require_once __DIR__."/../lib/Judgement.php";
     $Judge = new Judgement();
     $req = new Request();
@@ -29,8 +29,6 @@
     ?>
 
 <?php
-
-   
     $t = $Judge->getNotJudgedRequestID($_COOKIE["user_ID"]);
     $request_id = $t["0"];
     $data = $req->getRequest($request_id);
