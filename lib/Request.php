@@ -66,12 +66,22 @@
                 exit();
             }
         }
+        
         function updateRequestCondition($request_id,$team_id,$condition){
             $sql;
-            if($team_id = 0)$sql = "UPDATE {$this->table} SET condition_0 = :condition WHERE request_id = :request_id";
-            if($team_id = 1)$sql = "UPDATE {$this->table} SET condition_1 = :condition WHERE request_id = :request_id";
-            if($team_id = 2)$sql = "UPDATE {$this->table} SET condition_2 = :condition WHERE request_id = :request_id";
-            if($team_id = 3)$sql = "UPDATE {$this->table} SET condition_3 = :condition WHERE request_id = :request_id";
+            if($team_id == 0){
+                $sql = "UPDATE {$this->table} SET condition_0 = :condition WHERE request_id = :request_id";
+            }
+            if($team_id == 1){
+                $sql = "UPDATE {$this->table} SET condition_1 = :condition WHERE request_id = :request_id";
+            }
+            if($team_id == 2){
+                $sql = "UPDATE {$this->table} SET condition_2 = :condition WHERE request_id = :request_id";
+
+            }
+            if($team_id == 3){
+                $sql = "UPDATE {$this->table} SET condition_3 = :condition WHERE request_id = :request_id";
+            }
 
             try{
                 $stmt = $this->dbh->prepare($sql);
