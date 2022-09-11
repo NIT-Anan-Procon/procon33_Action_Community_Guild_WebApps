@@ -3,6 +3,7 @@
     Dotenv\Dotenv::createImmutable(__DIR__."/../")->load();
 
     require 'Request.php';
+    require 'User.php';
 
     class Judgement{
         protected $dbh;
@@ -32,8 +33,23 @@
                 as userJudgements
                 RIGHT OUTER JOIN requests 
                 ON userJudgements.request_id = requests.request_id
-                WHERE judgement is NULL;
+                WHERE judgement is NULL
             ";
+            $user = new User();
+            $team_id = $user->getTeamID($user_id);
+            if($team_id=="0"){
+                $sql .= " and requests.condition_0 = 0;";
+            }
+            else if($team_id=="1"){
+                $sql .= " and requests.condition_1 = 0;";
+            }
+            else if($team_id=="2"){
+                $sql .= " and requests.condition_2 = 0;";
+            }
+            else if($team_id=="3"){
+                $sql .= " and requests.condition_3 = 0;";
+            }
+            else $sql .= ";";
 
             try{
                 $stmt = $this->dbh->prepare($sql);
@@ -41,7 +57,6 @@
                 $res = $stmt->execute();
                 if($res){
                     $data = $stmt->fetch();
-                    
                     return $data;
                 }
             }
@@ -83,9 +98,11 @@
                 $res = $stmt->execute();
                 if($res){
                     $data = $stmt->fetch();
-                    if($data[0] >= 5){
+                    if((int)$data[0] >= 5){
                         $req = new Request();
                         $req->updateRequestCondition($request_id,$team_id,'1');
+                        echo $team_id." condition has been updated";
+                        
                     }
                     return $data[0];
                 }

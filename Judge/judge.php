@@ -33,6 +33,7 @@
     $request_id = $t["0"];
     $data = $req->getRequest($request_id);
     $counts = $Judge->getCounts($request_id);
+    var_dump($counts);
 
 ?>
 
