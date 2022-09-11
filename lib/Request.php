@@ -95,5 +95,28 @@
                 exit();
             }
         }
+
+        function getReceivesRequestID($team_id){
+            $team = "condition_".$team_id;
+            $sql = "SELECT request_id FROM requests WHERE {$team} = 1";
+
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $res = $stmt -> execute();
+                if($res){
+                    $data = $stmt->fetchall();
+                    return $data;
+                }
+            }
+            catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+
+                exit();
+            }
+        }
+
+        function getLegendRequestID(){
+            
+        }
     }
 ?>
