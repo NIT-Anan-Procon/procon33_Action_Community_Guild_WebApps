@@ -25,6 +25,7 @@
                       
            
             $Judge->sendJudgement($_POST["request_id"],$_COOKIE["user_ID"],$judgement);
+            $Judge->getCounts($_POST["request_id"]);
         }
     ?>
 
