@@ -2,6 +2,8 @@
     require './../vendor/autoload.php';
     Dotenv\Dotenv::createImmutable(__DIR__."/../")->load();
 
+    require 'File.php';
+
     class Request{
         protected $dbh;
         protected $table = 'requests';
@@ -23,12 +25,18 @@
             }
         }
 
-        function sendRequest($user_id,$request_name,$detail,$rank){
+        function sendRequest($user_id,$request_name,$detail,$rank,$img){
 
             $sql = "INSERT INTO {$this->table}(user_id,request_name,detail,rank,image_path)
                 VALUES
                     (:user_id,:request_name,:detail,:rank,:image_path);
             ";
+
+            $file = new File();
+
+            $image_path = $file->uploadImage($img);
+
+            
 
             try{
                 $stmt = $this->dbh->prepare($sql);
@@ -36,7 +44,7 @@
                 $stmt->bindValue(':request_name',$request_name);
                 $stmt->bindValue(':detail',$detail);
                 $stmt->bindValue(':rank',$rank);
-                $stmt->bindValue(':image_path', "");
+                $stmt->bindValue(':image_path',$image_path);
                 $stmt->execute();
             }
             catch(PDOException $e){

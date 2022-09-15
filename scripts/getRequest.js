@@ -46,7 +46,7 @@ function getRequestList(){
                 infoHtml += '</div>';
             infoHtml += '</div>';
             infoHtml += '<div class="forth">';
-                infoHtml += '<img class="image" src="../images/'+ data.picture +'" alt="picture">';
+                infoHtml += '<img class="image" src="'+ data.picture +'" alt="picture">';
             infoHtml += '</div>';
         infoHtml += '</button>';
         infoHtml += '</div>';
@@ -166,7 +166,7 @@ function getRequestInfoForJudge(){
             infoHtml += '</div>';
         infoHtml += '</div>';
         infoHtml += '<div class="third">';
-            infoHtml += '<img src="../images/' + request.picture + '">';
+            infoHtml += '<img src="'+ request.picture + '">';
         infoHtml += '</div>';
         infoHtml += '<div class="forth">';
             infoHtml += '<div class="niconico">';
