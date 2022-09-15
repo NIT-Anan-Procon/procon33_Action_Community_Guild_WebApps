@@ -6,9 +6,13 @@
         }
 
         function uploadImage($img){
+            $path;
             
             $uploaddir = '/var/www/html/uploads/';
             $upload = $uploaddir.basename($img['name']);
+
+            $pathdir = '/uploads/';
+            $path = $pathdir.basename($img['name']);
 
             //写真ファイルか判断してエラーを出したい
 
