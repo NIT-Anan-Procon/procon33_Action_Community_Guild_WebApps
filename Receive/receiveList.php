@@ -20,6 +20,11 @@
         $request_id = $value[0];
         $request = $req->getRequest($request_id);
         $counts = $movie->getCounts($request_id);
+
+        if($request["image_path"] == ''){
+            $request["image_path"] = '../images/kemono.jpg';
+        }
+
         ?>
         <script>
             data = {
@@ -27,7 +32,7 @@
                 request_name : <?php echo '"'.$request["request_name"].'"';?>,
                 author : <?php echo '"'.$request["name"].'"';?>,
                 id : <?php echo '"'.$key.'"';?>,
-                picture : "kemono.jpg",
+                picture : <?php echo '"'.$request['image_path'].'"'; ?>,
                 numsAnts:[
                     <?php echo $counts[0];?>,
                     <?php echo $counts[1];?>,

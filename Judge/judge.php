@@ -1,4 +1,4 @@
-
+//test
 <?php 
     ini_set('display_errors', 1);
 
@@ -25,25 +25,30 @@
                       
            
             $Judge->sendJudgement($_POST["request_id"],$_COOKIE["user_ID"],$judgement);
+            $Judge->getCounts($_POST["request_id"]);
         }
     ?>
 
 <?php
     $t = $Judge->getNotJudgedRequestID($_COOKIE["user_ID"]);
     $request_id = $t["0"];
-    $data = $req->getRequest($request_id);
+    $request = $req->getRequest($request_id);
     $counts = $Judge->getCounts($request_id);
     var_dump($counts);
+
+    if($request["image_path"] == ''){
+        $request["image_path"] = '../images/kemono.jpg';
+    }
 
 ?>
 
 <script>
     let request = {
-        rank : <?php echo $data["rank"];?>,
-        request_name : <?php echo '"'.$data["request_name"].'"'; ?>,
-        detail: <?php echo '"'.$data["detail"].'"'; ?>,
-        user_name: <?php echo '"'.$data["name"].'"'; ?>,
-        picture:"kemono.jpg",
+        rank : <?php echo $request["rank"];?>,
+        request_name : <?php echo '"'.$request["request_name"].'"'; ?>,
+        detail: <?php echo '"'.$request["detail"].'"'; ?>,
+        user_name: <?php echo '"'.$request["name"].'"'; ?>,
+        picture:"<?php echo $request["image_path"]; ?>",
     }
     //各ニコニコ数をDBから取ってくる
     let niconico = {
@@ -66,6 +71,7 @@
 </head>
 <body onload="getRequestInfoForJudge();">
     <div id="request-info"></div>
+    
 
     <form class="judge-buttons" id = "judges" method = "post">
         <input id="niconico" class="form-niconico-button" type="radio" name="nicodame" value="nico" checked>

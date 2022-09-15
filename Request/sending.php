@@ -25,7 +25,7 @@
             if($_POST["rank"]=="D")$rank=3;
             if($_POST["rank"]=="E")$rank=4;
 
-            $req -> sendRequest($user_id,$request_name,$detail,$rank);
+            $req -> sendRequest($user_id,$request_name,$detail,$rank,$_FILES["picture"]);
             echo "送信完了";
         ?>
     </h1>
