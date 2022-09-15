@@ -40,6 +40,7 @@
         <div class="text">依頼の詳細を入力するアリ</div>
         <textarea type="comment" id="request-detail" name="detail" class="form-request-detail"></textarea>
 
+        <input type="hidden" name="MAX_FILE_SIZE" value="4000000">
         <input type="file" id="request-picture" name="picture" class="request-picture-default">
         <label for="request-picture" name="request-picture">
             <img src="../images/add_picture.svg" width="250" class="request-picture">
