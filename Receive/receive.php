@@ -74,7 +74,7 @@
     </button>
     <hr width="90%">
     <form action="sending.php" method="post" enctype="multipart/form-data" >
-        <input type="hidden" name="MAX_FILE_SIZE" value="40000000">
+        <input type="hidden" name="MAX_FILE_SIZE" value="80000000">
         <input type="hidden" name="request_id" value="<?php echo $request_id?>">
         <input type="file" id="add-movie" name="movie" class="form-add-movie">
         <label for="add-movie" name="movie">
