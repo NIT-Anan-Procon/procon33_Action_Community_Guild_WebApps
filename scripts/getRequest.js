@@ -1,57 +1,61 @@
 function getRequestList(){
     let infoHtml = '';
-    for(const data of dataList){
-        infoHtml += '<div class="whole" id="';
-        infoHtml += data.id.toString();
-        infoHtml += '">';
-        infoHtml += '<button onclick="location.href=\'../Receive/receive.php\'">';
-            infoHtml += '<div class="first">';
-                infoHtml += '<div class="left">';
-                    infoHtml += '<img class="rank" src="../images/';
-                        if(data.rank == 0)infoHtml += 'icon_rank_A.svg';
-                        if(data.rank == 1)infoHtml += 'icon_rank_B.svg';
-                        if(data.rank == 2)infoHtml += 'icon_rank_C.svg';
-                        if(data.rank == 3)infoHtml += 'icon_rank_D.svg';
-                        if(data.rank == 4)infoHtml += 'icon_rank_E.svg';
-                        infoHtml += '" width= "50px"';
-                    infoHtml += '>';
-                infoHtml += '</div>';
-                infoHtml += '<div class="right">';
-                    infoHtml += '<div class="request-name">';
-                        infoHtml += data.request_name;
+    infoHtml += '<form action = "receive.php" method="post">';
+        for(const data of dataList){
+            infoHtml += '<div class="whole" id="';
+            infoHtml += data.id.toString();
+            infoHtml += '">';
+            infoHtml += '<button type="submit" name = "button"';
+                infoHtml += 'value = "'+data.request_id+'"';
+            infoHtml += '>';
+                infoHtml += '<div class="first">';
+                    infoHtml += '<div class="left">';
+                        infoHtml += '<img class="rank" src="../images/';
+                            if(data.rank == 0)infoHtml += 'icon_rank_A.svg';
+                            if(data.rank == 1)infoHtml += 'icon_rank_B.svg';
+                            if(data.rank == 2)infoHtml += 'icon_rank_C.svg';
+                            if(data.rank == 3)infoHtml += 'icon_rank_D.svg';
+                            if(data.rank == 4)infoHtml += 'icon_rank_E.svg';
+                            infoHtml += '" width= "50px"';
+                        infoHtml += '>';
+                    infoHtml += '</div>';
+                    infoHtml += '<div class="right">';
+                        infoHtml += '<div class="request-name">';
+                            infoHtml += data.request_name;
+                        infoHtml += '</div>';
                     infoHtml += '</div>';
                 infoHtml += '</div>';
+                infoHtml += '<div class="second">';
+                    infoHtml += '<div class="user-name">';
+                        infoHtml += 'Requested by ' + data.author;
+                    infoHtml += '</div>';
+                infoHtml += '</div>';
+                infoHtml += '<div class="third">';
+                    infoHtml += '<div>';
+                        infoHtml += '<div class="ant_passione"></div>';
+                        infoHtml += '<div class="text_pa">x' + data.numsAnts[0] + '</div>';
+                    infoHtml += '</div>';
+                    infoHtml += '<div>';
+                        infoHtml += '<div class="ant_sulserio"></div>';
+                        infoHtml += '<div class="text_su">x' + data.numsAnts[1] + '</div>';
+                    infoHtml += '</div>';
+                    infoHtml += '<div>';
+                        infoHtml += '<div class="ant_musica"></div>';
+                        infoHtml += '<div class="text_mu">x' + data.numsAnts[2] + '</div>';
+                    infoHtml += '</div>';
+                    infoHtml += '<div>';
+                        infoHtml += '<div class="ant_sorpresa"></div>';
+                        infoHtml += '<div class="text_so">x' + data.numsAnts[3] + '</div>';
+                    infoHtml += '</div>';
+                infoHtml += '</div>';
+                infoHtml += '<div class="forth">';
+                    infoHtml += '<img class="image" src="'+ data.picture +'" alt="picture">';
+                infoHtml += '</div>';
+            infoHtml += '</button>';
             infoHtml += '</div>';
-            infoHtml += '<div class="second">';
-                infoHtml += '<div class="user-name">';
-                    infoHtml += 'Requested by ' + data.author;
-                infoHtml += '</div>';
-            infoHtml += '</div>';
-            infoHtml += '<div class="third">';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_passione"></div>';
-                    infoHtml += '<div class="text_pa">x' + data.numsAnts[0] + '</div>';
-                infoHtml += '</div>';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_sulserio"></div>';
-                    infoHtml += '<div class="text_su">x' + data.numsAnts[1] + '</div>';
-                infoHtml += '</div>';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_musica"></div>';
-                    infoHtml += '<div class="text_mu">x' + data.numsAnts[2] + '</div>';
-                infoHtml += '</div>';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_sorpresa"></div>';
-                    infoHtml += '<div class="text_so">x' + data.numsAnts[3] + '</div>';
-                infoHtml += '</div>';
-            infoHtml += '</div>';
-            infoHtml += '<div class="forth">';
-                infoHtml += '<img class="image" src="'+ data.picture +'" alt="picture">';
-            infoHtml += '</div>';
-        infoHtml += '</button>';
-        infoHtml += '</div>';
 
-    }
+        }
+    infoHtml += "</form>";
     
     console.log(infoHtml);
     document.getElementById("requestList").innerHTML = infoHtml;
@@ -360,7 +364,7 @@ function getReceive(){
         infoHtml += '<div class="forth">';
             for(const movie of data.movies){
                 infoHtml += '<video class="movie" width="100%" height="" poster="../images/poster_passione.png" controls>';
-                    infoHtml += '<source src="../videos/'
+                    infoHtml += '<source src="'
                         infoHtml += movie;
                     infoHtml += '" type="video/mp4">'
                 infoHtml += '</video>';

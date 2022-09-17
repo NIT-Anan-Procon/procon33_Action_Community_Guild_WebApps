@@ -48,5 +48,51 @@
                 header('Error:'.$e->getMessage());
             }
         }
+
+        function getMovies($request_id,$team_id){
+            $sql = "SELECT movie_path 
+            FROM movies INNER JOIN users
+            ON movies.user_id = users.user_id 
+            WHERE request_id = :request_id AND team_id = :team_id";
+
+            try{
+                $stmt=$this -> dbh -> prepare($sql);
+                $stmt->bindValue(':request_id',$request_id);
+                $stmt->bindValue(':team_id',$team_id);
+                $res = $stmt -> execute();
+                if($res){
+                    $data = $stmt -> fetchAll();
+                    return $data;
+                }
+            }
+            catch(PDOException $e){
+                header('Error'.$e->getMessage());
+            }
+
+
+        }
+
+        function sendMovie($request_id,$user_id,$movie_file){
+            $sql = "INSERT INTO movies(request_id,user_id,movie_path)
+                VALUES
+                    (:request_id,:user_id,:movie_path);
+            ";
+
+            $File = new File();
+            $movie_path = $File -> uploadMovie($movie_file);
+
+            try{
+                $stmt = $this -> dbh -> prepare($sql);
+                $stmt -> bindValue(':request_id',$request_id);
+                $stmt -> bindValue(':user_id',$user_id);
+                $stmt -> bindValue(':movie_path',$movie_path);
+                $stmt->execute();
+            }
+            catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+
+                exit();
+            }
+        }
     }
 ?>

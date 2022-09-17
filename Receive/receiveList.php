@@ -39,6 +39,7 @@
                     <?php echo $counts[2];?>,
                     <?php echo $counts[3];?>,
                 ],
+                request_id : <?php echo '"'.$request_id.'"'; ?>
             }
             dataList.push(data);
         </script>
@@ -46,46 +47,6 @@
     }
 ?>
 
-
-<script>
-    // dataList = [
-    // {
-    //     rank:1,
-    //     request_name:"漫画の料理を完全再現してみた",
-    //     author:"azekawa",
-        
-    //     picture:"kemono.jpg",
-    //     id:1,
-    //     numsAnts:[1,2,2,1],
-    // },
-    // {
-    //     rank:2,
-    //     request_name:"獣肉食ってみた!",
-    //     author:"okada",
-    //     movie_count:2,
-    //     picture:"kemono.jpg",
-    //     id:2,
-    //     numsAnts:[1,2,3,1],
-    // },
-    // {
-    //     rank:3,
-    //     request_name:"Speak English!",
-    //     author:"tom",
-    //     movie_count:5,
-    //     picture:"TomAndJerry.png",
-    //     id:3,
-    //     numsAnts:[3,1,7,8],
-    // },
-    // {rank:3,
-    //     request_name:"Speak English!",
-    //     author:"tom",
-    //     movie_count:5,
-    //     picture:"kemono.jpg",
-    //     id:4,
-    //     numsAnts:[3,2,1,5],
-    // }
-    // ];
-</script>
 
 
 <!DOCTYPE html>

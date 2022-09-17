@@ -1,11 +1,45 @@
+<?php
+    ini_set('display_errors', 1);
+
+    require_once __DIR__."/../lib/Request.php";
+    require_once __DIR__."/../lib/Movie.php";
+    require_once __DIR__."/../lib/User.php";
+
+    $Request = new Request();
+    $Movie = new Movie();
+    $User = new User();
+
+    $request_id = $_POST["button"];
+    $user_id = $_COOKIE["user_ID"];
+    $team_id = $User -> getTeamID($user_id);
+
+    $data = $Request -> getRequest($request_id);
+    $counts = $Movie -> getCounts($request_id);
+    $movies = $Movie -> getMovies($request_id,$team_id);
+
+    var_dump($movies);
+?>
+
 <script>
     let data = {
-        rank : 0,
-        name : "漫画の料理を完全再現してみた！",
-        author : "阿瀬川アリ",
-        ant : [5,4,2,4],
-        movies : ["nanika.mp4","nanika.mp4","nanika.mp4","nanika.mp4"],
-        detail : "みんなで漫画「トリコ」に出てくるジュエルミートのような料理を完全再現しましょう！めちゃくちゃ頑張るのもヨシ！適当に作るのもヨシ！ダークマターが出来上がっても笑いあいましょう！ただし！火事にはならないように"
+        rank : "<?php echo $data["rank"]?>",
+        name : "<?php echo $data["request_name"]?>",
+        author : "<?php echo $data["name"]?>",
+        detail : "<?php echo $data["detail"]?>",
+        ant : [
+            <?php echo $counts[0]?>,
+            <?php echo $counts[1]?>,
+            <?php echo $counts[2]?>,
+            <?php echo $counts[3]?>,
+        ],
+        movies : [
+            <?php 
+                foreach($movies as $movie){
+                    echo '"'.$movie[0].'",';
+                }
+            ?>
+        ],
+        
     }
 </script>
 
@@ -39,9 +73,11 @@
         <img src="../images/sorpresa.svg" alt="sorpresa" width="250">
     </button>
     <hr width="90%">
-    <form action="test.html" method="post" enctype="multipart/form-data" >
-        <input type="file" id="add-movie" name="add-movie" class="form-add-movie">
-        <label for="add-movie" name="add-movie">
+    <form action="sending.php" method="post" enctype="multipart/form-data" >
+        <input type="hidden" name="MAX_FILE_SIZE" value="40000000">
+        <input type="hidden" name="request_id" value="<?php echo $request_id?>">
+        <input type="file" id="add-movie" name="movie" class="form-add-movie">
+        <label for="add-movie" name="movie">
             <img src="../images/add_movie.svg" width="250" class="add-movie">
         </label>
         <button type="submit" class="send-movie">
