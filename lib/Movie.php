@@ -72,14 +72,13 @@
 
         }
 
-        function sendMovie($request_id,$user_id,$movie_file){
+        function sendMovie($request_id,$user_id,$movie_path){
             $sql = "INSERT INTO movies(request_id,user_id,movie_path)
                 VALUES
                     (:request_id,:user_id,:movie_path);
             ";
 
-            $File = new File();
-            $movie_path = $File -> uploadMovie($movie_file);
+            
 
             try{
                 $stmt = $this -> dbh -> prepare($sql);

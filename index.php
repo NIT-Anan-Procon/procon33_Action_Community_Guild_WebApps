@@ -35,6 +35,6 @@
         <a href="./Receive/receiveList.php">受注画面</a>
     </div>
 
-    <?php echo phpinfo(); ?>
+    
 </body>
 </html>
