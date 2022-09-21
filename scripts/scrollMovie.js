@@ -4,6 +4,10 @@ $(function() {
         $(video).on('ended',function() {
             $("#forth").scrollLeft($("#p0").position().left);
             $("#forth").animate({scrollLeft:($("#p" + (i+1)).position().left)});
-        })
+        });
     }
-})
+});
+
+$(function() {
+    $("#name").text("fuck you");
+});

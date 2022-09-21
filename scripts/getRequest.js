@@ -321,7 +321,7 @@ function getReceive(){
                 infoHtml += '" width="50">';
             infoHtml += '</div>';
             infoHtml += '<div class="right">';
-                infoHtml += '<div class="request-name">'
+                infoHtml += '<div class="request-name" id="name">'
                     infoHtml += data.name;
                 infoHtml += '</div>';
             infoHtml += '</div>';
