@@ -54,6 +54,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src = "../scripts/getRequest.js" type="text/javascript" charset="shift_jis"></script>
     <script src = "../scripts/scrollMovie.js"></script>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/receive.css">
     <title>receive page</title>
 </head>
 <body onload = "getReceive();">
