@@ -364,15 +364,13 @@ function getReceive(){
         infoHtml += '<div class="forth">';
             var count = 0;
             for(const movie of data.movies){
-                infoHtml += '<div class="movie" width="100%">';
-                    infoHtml += '<video id="p';
-                    infoHtml += count++;
-                    infoHtml += '" poster="../images/poster_passione.png" controls>';
-                        infoHtml += '<source src="';
-                            infoHtml += movie;
-                        infoHtml += '" type="video/mp4">';
-                    infoHtml += '</video>';
-                infoHtml += '</div>';
+                infoHtml += '<video class="movie" width="100%" height="" id="p';
+                infoHtml += count++;
+                infoHtml += '" poster="../images/poster_passione.png" controls>';
+                infoHtml += '<source src="';
+                    infoHtml += movie;
+                    infoHtml += '" type="video/mp4">';
+                infoHtml += '</video>';
             }
         infoHtml += '</div>';
         infoHtml += '<div class="fifth">';
