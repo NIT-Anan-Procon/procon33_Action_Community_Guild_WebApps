@@ -361,11 +361,10 @@ function getReceive(){
             infoHtml +='</div>';
         infoHtml += '</div>';
 
-        infoHtml += '<div class="forth" width="200px">';
+        infoHtml += '<div class="forth">';
             var count = 0;
             for(const movie of data.movies){
-                infoHtml += '<div class="movie">';
-                    infoHtml += '<div>Uploaded by Azekawa</div>';
+                infoHtml += '<div class="movie" width="100%">';
                     infoHtml += '<video id="p';
                     infoHtml += count++;
                     infoHtml += '" poster="../images/poster_passione.png" controls>';
