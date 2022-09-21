@@ -49,6 +49,7 @@ body {
     color: #FF95E1;
 }
 .forth {
+    display: flex;
     white-space: nowrap;
     overflow-x: scroll;
 }

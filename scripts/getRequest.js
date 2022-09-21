@@ -361,15 +361,20 @@ function getReceive(){
             infoHtml +='</div>';
         infoHtml += '</div>';
 
-        infoHtml += '<div class="forth">';
+        infoHtml += '<div class="forth" id="forth">';
             for(const movie of data.movies){
-                infoHtml += '<video class="movie" width="100%" height="" poster="../images/poster_passione.png" controls>';
-                    infoHtml += '<source src="'
-                        infoHtml += movie;
-                    infoHtml += '" type="video/mp4">'
-                infoHtml += '</video>';
+                infoHtml += '<div>';
+                    infoHtml += 'Uploaded by azekawa';
+                infoHtml += '</div>';
+                infoHtml += '<div class="movie">';
+                    infoHtml += '<video width="100%" height="" poster="../images/poster_passione.png" controls>';
+                        infoHtml += '<source src="';
+                            infoHtml += movie;
+                        infoHtml += '" type="video/mp4">';
+                    infoHtml += '</video>';
+                infoHtml += '</div>';
             }
-        infoHtml += '</div>'
+        infoHtml += '</div>';
         infoHtml += '<div class="fifth">';
             infoHtml += '<div class="detail">';
                 infoHtml += data.detail;
