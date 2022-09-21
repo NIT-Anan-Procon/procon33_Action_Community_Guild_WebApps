@@ -7,7 +7,3 @@ $(function() {
         });
     }
 });
-
-$(function() {
-    $("#name").text("fuck you");
-});
