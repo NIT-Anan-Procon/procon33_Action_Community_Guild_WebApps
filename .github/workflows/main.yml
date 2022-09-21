@@ -2,7 +2,7 @@ name: main
 on:
   push:
     branches:
-      - main
+      - develop
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -18,7 +18,7 @@ jobs:
           proxy_password: ${{ secrets.PROXY_PASSWORD }}
           script: |
             cd /var/www/html/
-            git pull origin main
+            git pull origin develop
             git add .
             git commit -m "ServerUpdate"
-            git push origin main
+            git push origin develop
