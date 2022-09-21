@@ -368,7 +368,7 @@ function getReceive(){
                     infoHtml += '<div>Uploaded by Azekawa</div>';
                     infoHtml += '<video id="p';
                     infoHtml += count++;
-                    infoHtml += '" width="100%" height="" poster="../images/poster_passione.png" controls>';
+                    infoHtml += '" width="100%" poster="../images/poster_passione.png" controls>';
                         infoHtml += '<source src="'
                             infoHtml += movie;
                         infoHtml += '" type="video/mp4">'
