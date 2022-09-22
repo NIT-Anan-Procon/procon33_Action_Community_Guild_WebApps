@@ -9,11 +9,10 @@ $(function() {
             case 'mov':
             case 'm4a':
                 $("#send-movie").attr("disabled",false);
-                var title = $("#send-movie").prop("files")[0].name;
+                var movie = $(this).prop('files')[0];
                 Swal.fire({
                     icon: "success",
-                    text: "素晴らしい動画が添付されたアリ",
-                    title: title,
+                    text: movie.name,
                     showConfirmButton: false,
                     timer: 1500
                 });
