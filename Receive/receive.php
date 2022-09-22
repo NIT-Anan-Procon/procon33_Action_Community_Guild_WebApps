@@ -84,7 +84,7 @@
         <label for="add-movie" name="movie">
             <img src="../images/add_movie.svg" width="250" class="add-movie">
         </label>
-        <button type="submit" class="send-movie">
+        <button type="submit" class="send-movie" id="send-movie" disabled>
             <img src="../images/send_movie.svg" width="250">
         </button>
     </form>
