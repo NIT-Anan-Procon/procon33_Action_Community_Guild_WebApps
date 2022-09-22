@@ -3,16 +3,17 @@ $(function() {
         var file = e.target.files[0];
         var reader = new FileReader();
 
-        
-
         var ext = this.value.match(/\.(.+)$/)[1];
         switch(ext) {
             case 'mp4':
             case 'mov':
             case 'm4a':
                 $("#send-movie").attr("disabled",false);
+                var title = $("#send-movie").prop("files")[0].name;
                 Swal.fire({
-                    text: "イイ！",
+                    icon: "success",
+                    text: "素晴らしい動画が添付されたアリ",
+                    text: title,
                     showConfirmButton: false,
                     timer: 1500
                 });
