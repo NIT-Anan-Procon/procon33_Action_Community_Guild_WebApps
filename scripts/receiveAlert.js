@@ -13,7 +13,7 @@ $(function() {
                 Swal.fire({
                     icon: "success",
                     text: "素晴らしい動画が添付されたアリ",
-                    text: title,
+                    title: title,
                     showConfirmButton: false,
                     timer: 1500
                 });
