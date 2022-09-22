@@ -2,7 +2,6 @@ $(function() {
     $("#add-movie").change(function(e) {
         var file = e.target.files[0];
         var reader = new FileReader();
-
         var ext = this.value.match(/\.(.+)$/)[1];
         switch(ext) {
             case 'mp4':
@@ -26,9 +25,16 @@ $(function() {
                 });
                 this.value = "";
         }
-
-        
-
         reader.readAsDataURL(file);
+    });
+});
+
+$(function() {
+    $("#send-movie").on('click', function() {
+        Swal.fire({
+            text: "動画をアップロードしてますアリ",
+            showConfirmButton: false,
+            imageUrl:"../images/loading.gif"
+        });
     });
 });
