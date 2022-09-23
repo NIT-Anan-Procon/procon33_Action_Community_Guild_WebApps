@@ -49,7 +49,7 @@
 <script>
 function getName() {
     const array1 = ["アル", "ウブ", "オツ", "サギ", "タマ", "チビ", "イイ", "サム", "ジン", "ドン", "リン"];
-    const array2 = ["・", "スト", "デデ", "キル", "アカ", "マク", "ジン", "クロ", "ゼロ", "マル", "シャ"];
+    const array2 = ["・", "スト", "デデ", "キル", "アカ", "マク", "ジン", "クロ", "ゼロ", "マル", "ドル"];
     const array3 = ["オオアリ", "ヤマアリ", "アゲアリ", "ハリアリ", "シケアリ", "シロアリ", "イロアリ", "ルリアリ", "ガキアリ", "シワアリ", "蟻六十郎"];
     const arraySpecial = ["アリアナグランデ","アリトキリギリス","アリゲーターガー","アリザリンレッド","サンクチュアリー","ジャイアントモア","アントファガスタ","アリスタルコス　","アリストテレス　","アリーヴェデルチ","ありあけアリーナ"];
     if((Math.floor(Math.random() * 50)) == 0) {
@@ -60,8 +60,8 @@ function getName() {
 }
 
 function name(){
-       	info = '<input name="name" class="name" value="'+getName()+'">';
-       	console.log(info);
+    info = '<input name="name" class="name" value="'+getName()+'">';
+    console.log(info);
 	document.getElementById("hidden").innerHTML=info;
 } 
 </script>
