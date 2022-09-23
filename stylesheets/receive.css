@@ -52,10 +52,12 @@ body {
     display: flex;
     white-space: nowrap;
     overflow-x: scroll;
+    width: 100%;
 }
 .forth video{
-    border-radius: 20px;
-    margin-right: 50px;
+    flex-shrink: 0;
+    margin: 10px;
+    width: 100%;
 }
 .fifth {
     margin-top: 20px;

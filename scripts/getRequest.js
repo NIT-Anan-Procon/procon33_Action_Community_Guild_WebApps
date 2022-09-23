@@ -364,9 +364,9 @@ function getReceive(){
         infoHtml += '<div class="forth" id="forth">';
             var count = 0;
             for(const movie of data.movies){
-                infoHtml += '<video class="movie" width="100%" id="p';
+                infoHtml += '<video class="movie" id="p';
                 infoHtml += count++;
-                infoHtml += '" poster="../images/poster_passione.png" controls>';
+                infoHtml += '"  controls>';
                 infoHtml += '<source src="';
                     infoHtml += movie;
                     infoHtml += '" type="video/mp4">';
