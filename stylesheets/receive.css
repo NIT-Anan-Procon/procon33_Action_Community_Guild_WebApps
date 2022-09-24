@@ -56,7 +56,6 @@ body {
 }
 .forth video{
     flex-shrink: 0;
-    margin: 10px;
     width: 100%;
 }
 .fifth {
