@@ -49,13 +49,14 @@ body {
     color: #FF95E1;
 }
 .forth {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
     width: 100%;
-    height: 400px;
-    overflow-y: scroll;
 }
 .forth video{
     flex-shrink: 0;
-    height: 100%;
+    margin: 10px;
     width: 100%;
 }
 .fifth {
