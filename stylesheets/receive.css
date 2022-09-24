@@ -58,7 +58,7 @@ body {
     overflow-y: scroll;
 }
 .forth video{
-    height: 100%;
+    height: 400px;
     width: 100%;
 }
 .fifth {
