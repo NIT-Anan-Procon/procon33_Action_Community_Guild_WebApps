@@ -11,7 +11,7 @@ $(function() {
                 var movie = $(this).prop('files')[0];
                 Swal.fire({
                     icon: "success",
-                    text: movie.name,
+                    text: movie.name + " が追加されましたアリ！",
                     showConfirmButton: false,
                     timer: 1500
                 });
