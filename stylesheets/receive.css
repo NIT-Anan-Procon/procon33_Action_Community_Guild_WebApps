@@ -50,12 +50,15 @@ body {
 }
 .forth {
     display: flex;
-    white-space: nowrap;
-    overflow-x: scroll;
+    flex-flow: column;
+    height: 400px;
     width: 100%;
+    padding: 0;
+    text-align: center;
+    overflow-y: scroll;
 }
 .forth video{
-    flex-shrink: 0;
+    height: 100%;
     width: 100%;
 }
 .fifth {
