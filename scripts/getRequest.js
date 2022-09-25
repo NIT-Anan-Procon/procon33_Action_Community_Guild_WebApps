@@ -334,41 +334,45 @@ function getRequestInfoForJudge(){
 // }
 
 function getMembers(){
-    let team = '';
-    if(user.team == 0)team = "passione";
-    if(user.team == 1)team = "sulserio";
-    if(user.team == 2)team = "musica";
-    if(user.team == 3)team = "sorpresa";
+    // let team = '';
+    // if(user.team == 0)team = "passione";
+    // if(user.team == 1)team = "sulserio";
+    // if(user.team == 2)team = "musica";
+    // if(user.team == 3)team = "sorpresa";
 
-    let imgHtml = '<img src="../images/';
-    imgHtml += team;
-    imgHtml += '.svg" width="250">';
+    // let imgHtml = '<img src="../images/';
+    // imgHtml += team;
+    // imgHtml += '.svg" width="250">';
 
-    document.getElementById("team").innerHTML = imgHtml;
+    // document.getElementById("team").innerHTML = imgHtml;
 
 
-    let infoHtml = '';
+    // let infoHtml = '';
 
-    for(let member of members){
-        infoHtml += '<div class="member">'
-            infoHtml += '<button class="situation">';
-                infoHtml += '<img src="../images/'
-                infoHtml += member.situationImage;
-                infoHtml += '" width="100" onclick="location.href=\'../Receive/receive.php\'">';
-            infoHtml += '</button>';
-            infoHtml += '<div class="ant">';
-                infoHtml += '<img src="../images/';
-                infoHtml += member.antImage;
-                infoHtml += '" width="100">';
-            infoHtml += '</div>';
-            infoHtml += '<div class="name">';
-                infoHtml += member.author;
-            infoHtml += '</div>';
-        infoHtml += '</div>'
-    }
+    // for(let member of members){
+    //     infoHtml += '<div class="member">'
+    //         infoHtml += '<button type="submit" class="situation" name="button" value="';
 
-    console.log(infoHtml);
-    document.getElementById("members").innerHTML = infoHtml; 
+    //             infoHtml += '32';
+
+    //             infoHtml += '">'
+    //             infoHtml += '<img src="../images/'
+    //             infoHtml += member.situationImage;
+    //             infoHtml += '" width="100">';
+    //         infoHtml += '</button>';
+    //         infoHtml += '<div class="ant">';
+    //             infoHtml += '<img src="../images/';
+    //             infoHtml += member.antImage;
+    //             infoHtml += '" width="100">';
+    //         infoHtml += '</div>';
+    //         infoHtml += '<div class="name">';
+    //             infoHtml += member.author;
+    //         infoHtml += '</div>';
+    //     infoHtml += '</div>'
+    // }
+
+    // console.log(infoHtml);
+    // document.getElementById("members").innerHTML = infoHtml; 
 }
 
 

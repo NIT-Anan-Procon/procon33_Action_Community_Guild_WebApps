@@ -11,13 +11,17 @@
         
         ini_set('display_errors', 1);
         require_once __DIR__."/../lib/User.php";
+        require_once __DIR__."/../lib/Request.php";
 
         $user = new User();
+        $Request = new Request();
 
         $user_id = $_COOKIE["user_ID"];
         $team_id = $user->getTeamID($user_id);
         
         $data = $user->getUserNameList($team_id);
+        
+
         $json_array = json_encode($data);
         
     ?>
@@ -58,24 +62,47 @@
     </div>
     <div>
         <button  class="team" id="team" onclick="location.href='../Home/home.php'">
-            <img src="../images/passione.svg" width="250">   
+            <?php
+                $team;
+                if($team_id==0)$team = "passione";
+                if($team_id==1)$team = "sulserio";
+                if($team_id==2)$team = "musica";
+                if($team_id==3)$team = "sorpresa";
+
+                echo '<img src="../images/'.$team.'.svg" width="250">';
+            ?> 
         </button>
     </div>
 
     
 
-    <div id="members">
-        <div class="member">
-            <button class="situation">
-                <img src="../images/example.svg" width="100" onclick="location.href='../Receive/receive.php'">
-            </button>
-            <div class="ant">
-                <img src="../images/ant_first.svg" width="100">
+    <form id="members" action="../Receive/receive.php" method="post">
+        
+        <?php
+            $antImage = "ant_first.svg";
+            
+            foreach($data as $value){
+                $name = $value[0];
+                $user_id = $value[1];
+                $request_id = -1;
+               
+                $request_id = $Request->getRequestByUser($user_id);
+                if($request_id == NULL)continue;
+            ?>
+            <div class="member">
+                <button type="submit" class="situation" name="button" value="<?php echo $request_id?>">
+                    <img src="../images/example.svg" width="100">
+                </button>
+                <div class="ant">
+                    <img src="../images/<?php echo "$antImage"?>"width="100">
+                </div>
+                <div class="name">
+                    <?php echo $name?>
+                </div>
             </div>
-            <div class="name">
-                これ見えてるならjsが動いてないよ
-            </div>
-        </div>
+            <?php
+            }
+        ?>
     </div>
     
 </body>

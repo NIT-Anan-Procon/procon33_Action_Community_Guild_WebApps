@@ -10,6 +10,7 @@
     $User = new User();
 
     $request_id = $_POST["button"];
+    echo 'request_id ='.$request_id;
     $user_id = $_COOKIE["user_ID"];
     $team_id = $User -> getTeamID($user_id);
 
