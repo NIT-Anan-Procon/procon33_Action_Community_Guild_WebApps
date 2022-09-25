@@ -93,9 +93,11 @@
                     foreach($movies as $value){
                         $movie = $value[0];
                         ?>
-                            <video class="movie" width="100%" id="p<?php echo $count?>" poster="../images/poster_passione.png" controls>
-                                <source src="<?php echo $movie;?>" type="video/mp4">
-                            </video>
+                            <div class="movie" id="movie">
+                                <video id="p<?php echo $count?>">
+                                    <source src="<?php echo $movie;?>" type="video/mp4">
+                                </video>
+                            </div>
                         <?php
                         $count += 1;
                     }
