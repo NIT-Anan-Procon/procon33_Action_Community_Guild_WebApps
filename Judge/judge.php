@@ -6,7 +6,6 @@
     $req = new Request();
         
         if(isset($_POST['submit'])){
-            // echo '<h1>データベースに送られるデータ</h1>';
             $judgement;
             if($_POST['submit']=="check" && isset($_POST['nicodame'])){
                 $judgement = 1;
@@ -49,7 +48,7 @@
         user_name: <?php echo '"'.$request["name"].'"'; ?>,
         picture:"<?php echo $request["image_path"]; ?>",
     }
-    //各ニコニコ数をDBから取ってくる
+
     let niconico = {
         passione : <?php echo $counts[0]?>,
         sulserio : <?php echo $counts[1]?>,

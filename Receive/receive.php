@@ -20,31 +20,6 @@
     var_dump($movies);
 ?>
 
-<script>
-    let data = {
-        rank : "<?php echo $data["rank"]?>",
-        name : "<?php echo $data["request_name"]?>",
-        author : "<?php echo $data["name"]?>",
-        detail : "<?php echo $data["detail"]?>",
-        ant : [
-            <?php echo $counts[0]?>,
-            <?php echo $counts[1]?>,
-            <?php echo $counts[2]?>,
-            <?php echo $counts[3]?>,
-        ],
-        movies : [
-            <?php 
-                foreach($movies as $movie){
-                    echo '"'.$movie[0].'",';
-                }
-            ?>
-        ],
-        
-        
-    }
-</script>
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -59,9 +34,79 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/receive.css">
     <title>receive page</title>
 </head>
-<body onload = "getReceive();">
+<body>
     
-    <div id="receive"></div>
+    <div id="receive">
+        <div class="whole">
+            <div class="first">
+                <div class="left">
+                    <img src="../images/<?php
+                        if($data["rank"]==0) echo 'icon_rank_A.svg';
+                        if($data["rank"]==1) echo 'icon_rank_B.svg';
+                        if($data["rank"]==2) echo 'icon_rank_C.svg';
+                        if($data["rank"]==3) echo 'icon_rank_D.svg';
+                        if($data["rank"]==4) echo 'icon_rank_E.svg';
+                    ?>" width="50">
+                </div>
+                <div class="right">
+                    <div class="request-name">
+                        <?php echo $data["request_name"];?>
+                    </div>
+                </div>
+            </div>
+            <div class="second">
+                <div class="user-name">
+                    Requested by + <?php echo $data["name"];?>
+                </div>
+            </div>
+            <div class="third">
+                <div>
+                    <div class="ant_passione"></div>
+                    <div class="text_pa">x
+                        <?php echo $counts[0]; ?>
+                    </div>
+                </div>
+                <div>
+                    <div class="ant_sulserio"></div>
+                    <div class="text_su">x
+                        <?php echo $counts[1]; ?>
+                    </div>
+                </div>
+                <div>
+                    <div class="ant_musica"></div>
+                    <div class="text_mu">x
+                        <?php echo $counts[2]; ?>
+                    </div>
+                </div>
+                <div>
+                    <div class="ant_sorpresa"></div>
+                    <div class="text_so">x
+                        <?php echo $counts[3]; ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forth" id="forth">
+                <?php
+                    $count = 0;
+                    foreach($movies as $value){
+                        $movie = $value[0];
+                        ?>
+                            <video class="movie" width="100%" id="p<?php echo $count?>" poster="../images/poster_passione.png" controls>
+                                <source src="<?php echo $movie;?>" type="video/mp4">
+                            </video>
+                        <?php
+                        $count += 1;
+                    }
+                ?>
+            </div>
+            <div class="fifth">
+                <div class="detail">
+                    <?php echo $data["detail"]; ?>
+                </div>
+            </div>
+        <div>           
+    </div>
     <hr width="90%">
     <div class="comment">見たい巣の動画を選択できるアリ</div>
     <button>

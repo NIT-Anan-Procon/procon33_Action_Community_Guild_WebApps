@@ -218,171 +218,120 @@ function getRequestInfoForJudge(){
     }
 }
 
-function getRequestInfoForReceive(){
+//これたぶんつかってない。
+// function getRequestInfoForMovie(){
    
-    let infoHtml = ''
-    infoHtml += '<div class="whole">';
-        infoHtml += '<div class="above">';
-            infoHtml += '<div class="left">';
-                infoHtml += '<img class="rank" src="../images/';
-                if(request.rank == 0)infoHtml += 'icon_rank_A.svg';
-                if(request.rank == 1)infoHtml += 'icon_rank_B.svg';
-                if(request.rank == 2)infoHtml += 'icon_rank_C.svg';
-                if(request.rank == 3)infoHtml += 'icon_rank_D.svg';
-                infoHtml += '" width= "50px"';
-                infoHtml += '>';
-            infoHtml += '</div>';
-            infoHtml += '<div class="right">';
-                infoHtml += '<div class="request-name">' + request.request_name + '</div>';
-                infoHtml += '<div class="user-name">' + "requested by " + request.user_name + '</div>';
-            infoHtml += '</div>';
-        infoHtml += '</div>';
+//     let infoHtml = ''
+//     infoHtml = infoHtml + '<div class="request-whole">';
+//         infoHtml = infoHtml + '<div class="above">';
+//             infoHtml = infoHtml + '<div class="left">';
+//                 infoHtml = infoHtml + '<img class="rank" src="../images/';
+//                 if(request.rank == 0)infoHtml = infoHtml + 'icon_rank_A.svg';
+//                 if(request.rank == 1)infoHtml = infoHtml + 'icon_rank_B.svg';
+//                 if(request.rank == 2)infoHtml = infoHtml + 'icon_rank_C.svg';
+//                 if(request.rank == 3)infoHtml = infoHtml + 'icon_rank_D.svg';
+//                 infoHtml = infoHtml + '" width= "50px"';
+//                 infoHtml = infoHtml + '>';
+//             infoHtml = infoHtml + '</div>';
+//             infoHtml = infoHtml + '<div class="right">';
+//                 infoHtml = infoHtml + '<div class="request-name">' + request.request_name + '</div>';
+//                 infoHtml = infoHtml + '<div class="user-name">' + "requested by " + request.user_name + '</div>';
+//             infoHtml = infoHtml + '</div>';
+//         infoHtml = infoHtml + '</div>';
 
-        infoHtml += '<video class="movie" controls width="100%">';
-            infoHtml += '<source src="../videos/nanika.mp4" type="video/mp4">';
-        infoHtml += '</video>';
+//         infoHtml = infoHtml + '<video class="movie" controls width="100%">';
+//             infoHtml = infoHtml + '<source src="../videos/nanika.mp4" type="video/mp4">';
+//         infoHtml = infoHtml + '</video>';
 
-        infoHtml += '<div class="middle">';
-            infoHtml += '<div class="detail">'+ request.detail +'</div>';
-        infoHtml += '</div>';
+//         infoHtml = infoHtml + '<div class="middle">';
+//             infoHtml = infoHtml + '<div class="detail">'+ request.detail +'</div>';
+//         infoHtml = infoHtml + '</div>';
 
-        infoHtml += '<div class="below">';
-            infoHtml += '<div class="ants">';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_passione"></div>';
-                    infoHtml += '<div class="text_pa">x' + 1 + '</div>';
-                infoHtml += '</div>';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_sulserio"></div>';
-                    infoHtml += '<div class="text_su">x' + 2 + '</div>';
-                infoHtml += '</div>';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_musica"></div>';
-                    infoHtml += '<div class="text_mu">x' + 2 + '</div>';
-                infoHtml += '</div>';
-                infoHtml += '<div>';
-                    infoHtml += '<div class="ant_sorpresa"></div>';
-                    infoHtml += '<div class="text_so">x' + 1 + '</div>';
-                infoHtml += '</div>';
-            infoHtml += '</div>';
-        infoHtml += '</div>';
-    infoHtml += '</div>';
+//     infoHtml = infoHtml + '</div>';
 
-    console.log(infoHtml);
-    document.getElementById("request-info").innerHTML = infoHtml;
-}
+//     console.log(infoHtml);
+//     document.getElementById("request-info").innerHTML = infoHtml;
+// }
 
-function getRequestInfoForMovie(){
-   
-    let infoHtml = ''
-    infoHtml = infoHtml + '<div class="request-whole">';
-        infoHtml = infoHtml + '<div class="above">';
-            infoHtml = infoHtml + '<div class="left">';
-                infoHtml = infoHtml + '<img class="rank" src="../images/';
-                if(request.rank == 0)infoHtml = infoHtml + 'icon_rank_A.svg';
-                if(request.rank == 1)infoHtml = infoHtml + 'icon_rank_B.svg';
-                if(request.rank == 2)infoHtml = infoHtml + 'icon_rank_C.svg';
-                if(request.rank == 3)infoHtml = infoHtml + 'icon_rank_D.svg';
-                infoHtml = infoHtml + '" width= "50px"';
-                infoHtml = infoHtml + '>';
-            infoHtml = infoHtml + '</div>';
-            infoHtml = infoHtml + '<div class="right">';
-                infoHtml = infoHtml + '<div class="request-name">' + request.request_name + '</div>';
-                infoHtml = infoHtml + '<div class="user-name">' + "requested by " + request.user_name + '</div>';
-            infoHtml = infoHtml + '</div>';
-        infoHtml = infoHtml + '</div>';
 
-        infoHtml = infoHtml + '<video class="movie" controls width="100%">';
-            infoHtml = infoHtml + '<source src="../videos/nanika.mp4" type="video/mp4">';
-        infoHtml = infoHtml + '</video>';
+//捨ててヨシ!
+// function getReceive(){
+//     let infoHtml = '';
 
-        infoHtml = infoHtml + '<div class="middle">';
-            infoHtml = infoHtml + '<div class="detail">'+ request.detail +'</div>';
-        infoHtml = infoHtml + '</div>';
+//     infoHtml += '<div class="whole">';
+//         infoHtml += '<div class="first">';
+//             infoHtml += '<div class="left">';
+//                 infoHtml += '<img src="../images/';
+//                 if(data.rank == 0)infoHtml += 'icon_rank_A.svg';
+//                 if(data.rank == 1)infoHtml += 'icon_rank_B.svg';
+//                 if(data.rank == 2)infoHtml += 'icon_rank_C.svg';
+//                 if(data.rank == 3)infoHtml += 'icon_rank_D.svg';
+//                 if(data.rank == 4)infoHtml += 'icon_rank_E.svg';
+//                 infoHtml += '" width="50">';
+//             infoHtml += '</div>';
+//             infoHtml += '<div class="right">';
+//                 infoHtml += '<div class="request-name">'
+//                     infoHtml += data.name;
+//                 infoHtml += '</div>';
+//             infoHtml += '</div>';
+//         infoHtml += '</div>';
+//         infoHtml += '<div class="second">';
+//             infoHtml += '<div class="user-name">';
+//                 infoHtml += 'Requested by '+data.author;
+//             infoHtml += "</div>";
+//         infoHtml += '</div>';
+//         infoHtml += '<div class="third">';
+//             infoHtml += '<div>';
+//                     infoHtml += '<div class="ant_passione"></div>';
+//                     infoHtml += '<div class="text_pa">x';
+//                         infoHtml += data.ant[0];
+//                     infoHtml += '</div>';
+//             infoHtml +='</div>';
 
-    infoHtml = infoHtml + '</div>';
+//             infoHtml += '<div>';
+//                     infoHtml += '<div class="ant_sulserio"></div>';
+//                     infoHtml += '<div class="text_su">x';
+//                         infoHtml += data.ant[1];
+//                     infoHtml += '</div>';
+//             infoHtml +='</div>';
 
-    console.log(infoHtml);
-    document.getElementById("request-info").innerHTML = infoHtml;
-}
+//             infoHtml += '<div>';
+//                     infoHtml += '<div class="ant_musica"></div>';
+//                     infoHtml += '<div class="text_mu">x';
+//                         infoHtml += data.ant[2];
+//                     infoHtml += '</div>';
+//             infoHtml +='</div>';
 
-function getReceive(){
-    let infoHtml = '';
+//             infoHtml += '<div>';
+//                     infoHtml += '<div class="ant_sorpresa"></div>';
+//                     infoHtml += '<div class="text_so">x';
+//                         infoHtml += data.ant[3];
+//                     infoHtml += '</div>';
+//             infoHtml +='</div>';
+//         infoHtml += '</div>';
 
-    infoHtml += '<div class="whole">';
-        infoHtml += '<div class="first">';
-            infoHtml += '<div class="left">';
-                infoHtml += '<img src="../images/';
-                if(data.rank == 0)infoHtml += 'icon_rank_A.svg';
-                if(data.rank == 1)infoHtml += 'icon_rank_B.svg';
-                if(data.rank == 2)infoHtml += 'icon_rank_C.svg';
-                if(data.rank == 3)infoHtml += 'icon_rank_D.svg';
-                if(data.rank == 4)infoHtml += 'icon_rank_E.svg';
-                infoHtml += '" width="50">';
-            infoHtml += '</div>';
-            infoHtml += '<div class="right">';
-                infoHtml += '<div class="request-name">'
-                    infoHtml += data.name;
-                infoHtml += '</div>';
-            infoHtml += '</div>';
-        infoHtml += '</div>';
-        infoHtml += '<div class="second">';
-            infoHtml += '<div class="user-name">';
-                infoHtml += 'Requested by '+data.author;
-            infoHtml += "</div>";
-        infoHtml += '</div>';
-        infoHtml += '<div class="third">';
-            infoHtml += '<div>';
-                    infoHtml += '<div class="ant_passione"></div>';
-                    infoHtml += '<div class="text_pa">x';
-                        infoHtml += data.ant[0];
-                    infoHtml += '</div>';
-            infoHtml +='</div>';
+//         infoHtml += '<div class="forth" id="forth">';
+//             var count = 0;
+//             for(const movie of data.movies){
+//                 infoHtml += '<video class="movie" width="100%" id="p';
+//                 infoHtml += count++;
+//                 infoHtml += '" poster="../images/poster_passione.png" controls>';
+//                 infoHtml += '<source src="';
+//                     infoHtml += movie;
+//                     infoHtml += '" type="video/mp4">';
+//                 infoHtml += '</video>';
+//             }
+//         infoHtml += '</div>';
+//         infoHtml += '<div class="fifth">';
+//             infoHtml += '<div class="detail">';
+//                 infoHtml += data.detail;
+//             infoHtml += '</div>'
+//         infoHtml += '</div>';
+//     infoHtml += '</div>';
 
-            infoHtml += '<div>';
-                    infoHtml += '<div class="ant_sulserio"></div>';
-                    infoHtml += '<div class="text_su">x';
-                        infoHtml += data.ant[1];
-                    infoHtml += '</div>';
-            infoHtml +='</div>';
-
-            infoHtml += '<div>';
-                    infoHtml += '<div class="ant_musica"></div>';
-                    infoHtml += '<div class="text_mu">x';
-                        infoHtml += data.ant[2];
-                    infoHtml += '</div>';
-            infoHtml +='</div>';
-
-            infoHtml += '<div>';
-                    infoHtml += '<div class="ant_sorpresa"></div>';
-                    infoHtml += '<div class="text_so">x';
-                        infoHtml += data.ant[3];
-                    infoHtml += '</div>';
-            infoHtml +='</div>';
-        infoHtml += '</div>';
-
-        infoHtml += '<div class="forth" id="forth">';
-            var count = 0;
-            for(const movie of data.movies){
-                infoHtml += '<video class="movie" width="100%" id="p';
-                infoHtml += count++;
-                infoHtml += '" poster="../images/poster_passione.png" controls>';
-                infoHtml += '<source src="';
-                    infoHtml += movie;
-                    infoHtml += '" type="video/mp4">';
-                infoHtml += '</video>';
-            }
-        infoHtml += '</div>';
-        infoHtml += '<div class="fifth">';
-            infoHtml += '<div class="detail">';
-                infoHtml += data.detail;
-            infoHtml += '</div>'
-        infoHtml += '</div>';
-    infoHtml += '</div>';
-
-    console.log(infoHtml);
-    document.getElementById("receive").innerHTML = infoHtml;
-}
+//     console.log(infoHtml);
+//     document.getElementById("receive").innerHTML = infoHtml;
+// }
 
 function getMembers(){
     let team = '';
