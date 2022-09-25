@@ -9,29 +9,23 @@
 </head>
 <body>
     <?php
-        echo 'team_id ='.$_POST["team"];
-        echo 'name ='.$_POST["name"];
-
-
         ini_set('display_errors', 1);
         require_once __DIR__."/../lib/User.php";
-    
         $user = new User();
-
         $team_id;
         if($_POST["team"]=="0")$team_id=0;
         if($_POST["team"]=="1")$team_id=1;
         if($_POST["team"]=="2")$team_id=2;
         if($_POST["team"]=="3")$team_id=3;
-
         $name = $_POST["name"];
-
         $user->sendUser($name,$team_id);
-
-        echo '<div class="main">巣への加入が完了されたアリ</div>';
         $data = $user->getUserID();
-
         setcookie("user_ID",(string)$data[0],time()+60*60,"/");
+
+
+        echo 'team_id ='.$_POST["team"];
+        echo 'name ='.$_POST["name"];
+        echo '<div class="main">巣への加入が完了されたアリ</div>';
         echo "クッキーに入ったユーザーID:".$_COOKIE["user_ID"];
     ?>
 

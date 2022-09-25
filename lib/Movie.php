@@ -23,6 +23,39 @@
             }
         }
 
+        function count($team_id){
+            $sql = "SELECT count(request_id) 
+            FROM movies INNER JOIN users ON movies.user_id = users.user_id
+            WHERE team_id = :team_id";
+
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue(':team_id',$team_id);
+                $stmt->execute();
+                $data = $stmt->fetch();
+                return $data[0];
+            }
+            catch(PDOException $e){
+                header('Error:'.$e->getMessage());
+    
+                exit();
+            }
+        }
+
+        function getRatio(){
+            $counts = array();
+            for($team_id = 0;$team_id<4;$team_id++){
+                array_push($counts,$this->count($team_id));
+            }
+
+            $ratio = array();
+            $sum = $counts[0]+$counts[1]+$counts[2]+$counts[3];
+            foreach($counts as $count){
+                array_push($ratio,1+(int)$count*10/$sum);
+            }
+            return $ratio;
+        }
+
         function getCounts($request_id){
             $counts = array();
             for($team_id = 0;$team_id<4;$team_id++){
