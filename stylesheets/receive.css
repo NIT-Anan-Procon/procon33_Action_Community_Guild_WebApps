@@ -58,6 +58,9 @@ body {
     text-align: center;
     overflow-y: scroll;
 }
+.forth::-webkit-scrollbar {
+    display: none;
+}
 .movie {
     display: block;
     flex-flow: column;
