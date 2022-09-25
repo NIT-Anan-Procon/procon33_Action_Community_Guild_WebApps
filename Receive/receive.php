@@ -64,7 +64,7 @@
     <div id="receive"></div>
     <hr width="90%">
     <div class="comment">見たい巣の動画を選択できるアリ</div>
-    <button>
+    <button id="start">
         <img src="../images/passione.svg" alt="passione" width="250">
     </button>
     <button>
