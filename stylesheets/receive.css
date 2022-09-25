@@ -53,11 +53,18 @@ body {
     flex-flow: column;
     height: 400px;
     width: 100%;
-    padding: 0;
     text-align: center;
     overflow-y: scroll;
 }
-.forth video{
+.movie {
+    display: block;
+    flex-flow: column;
+    height: 400px;
+    width: 100%;
+}
+.movie video{
+    display: block;
+    margin: 0 auto;
     height: 400px;
     width: 100%;
 }
