@@ -90,7 +90,7 @@
                 if($request_id == NULL)continue;
             ?>
             <div class="member">
-                <button type="submit" class="situation" name="button" value="<?php echo $request_id?>">
+                <button type="submit" class="situation" name="request_id" value="<?php echo $request_id?>">
                     <img src="../images/example.svg" width="100">
                 </button>
                 <div class="ant">
