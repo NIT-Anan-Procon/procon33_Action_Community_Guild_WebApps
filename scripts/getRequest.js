@@ -5,7 +5,7 @@ function getRequestList(){
             infoHtml += '<div class="whole" id="';
             infoHtml += data.id.toString();
             infoHtml += '">';
-            infoHtml += '<button type="submit" name = "button"';
+            infoHtml += '<button type="submit" name = "request_id"';
                 infoHtml += 'value = "'+data.request_id+'"';
             infoHtml += '>';
                 infoHtml += '<div class="first">';
