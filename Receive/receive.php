@@ -99,7 +99,7 @@
                         ?>
                             <div class="movie" id="movie">
                                 <video id="p<?php echo $count?>">
-                                    <source src="<?php echo $movie;?>" type="video/mp4">
+                                    <source src="<?php echo $movie;?>">
                                 </video>
                             </div>
                         <?php
