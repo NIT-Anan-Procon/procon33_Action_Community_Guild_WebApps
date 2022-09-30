@@ -98,7 +98,7 @@
                         $movie = $value[0];
                         ?>
                             <div class="movie" id="movie">
-                                <video id="p<?php echo $count?>">
+                                <video id="p<?php echo $count?>" controls>
                                     <source src="<?php echo $movie;?>">
                                 </video>
                             </div>
