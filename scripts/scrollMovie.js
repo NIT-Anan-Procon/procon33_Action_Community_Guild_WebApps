@@ -70,15 +70,3 @@ $(function() {
         $("#p"+13).get(0).play();
     });
 });
-
-//assign video element to variable vid
-var vid = document.getElementById("p0");
-
-function videoTimeUpdate(e)
-{
-    //set controls settings to controls,this make controls show everytime this event is triggered
-    vid.setAttribute("controls","controls");
-}
-
-//add event listener to video for timeupdate event
-vid.addEventListener('timeupdate', videoTimeUpdate, false);
