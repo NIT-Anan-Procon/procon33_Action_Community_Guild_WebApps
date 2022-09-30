@@ -61,31 +61,31 @@
             </div>
             <div class="second">
                 <div class="user-name">
-                    Requested by + <?php echo $data["name"];?>
+                    Requested by <?php echo $data["name"];?>
                 </div>
             </div>
             <div class="third">
                 <div>
                     <div class="ant_passione"></div>
-                    <div class="text_pa">x
+                    <div class="text_pa">
                         <?php echo $counts[0]; ?>
                     </div>
                 </div>
                 <div>
                     <div class="ant_sulserio"></div>
-                    <div class="text_su">x
+                    <div class="text_su">
                         <?php echo $counts[1]; ?>
                     </div>
                 </div>
                 <div>
                     <div class="ant_musica"></div>
-                    <div class="text_mu">x
+                    <div class="text_mu">
                         <?php echo $counts[2]; ?>
                     </div>
                 </div>
                 <div>
                     <div class="ant_sorpresa"></div>
-                    <div class="text_so">x
+                    <div class="text_so">
                         <?php echo $counts[3]; ?>
                     </div>
                 </div>
