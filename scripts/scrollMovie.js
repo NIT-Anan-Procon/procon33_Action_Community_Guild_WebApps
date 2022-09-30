@@ -1,4 +1,9 @@
 $(function() {
+    $("#start").on('click', function() {
+        $("#forth").scrollTop(0);
+        $("#p"+0).get(0).play();
+    });
+
     $("#p" + 0).on('ended',function() {
         $("#forth").scrollTop(0);
         $("#forth").scrollTop(400);

@@ -119,16 +119,16 @@
     <button id="start">映像スタートボタン</button>
     <form method="post">
         <input type="hidden" name="request_id" value="<?php echo $request_id?>">
-        <button name="team" value="0">
+        <button name="team" value="0"  id="start">
             <img src="../images/passione.svg" alt="passione" width="250">
         </button>
-        <button name="team" value="1">
+        <button name="team" value="1"  id="start">
             <img src="../images/sulserio.svg" alt="sulserio" width="250">
         </button>
-        <button name="team" value="2">
+        <button name="team" value="2"  id="start">
             <img src="../images/musica.svg" alt="musica" width="250">
         </button>
-        <button name="team" value="3">
+        <button name="team" value="3"  id="start">
             <img src="../images/sorpresa.svg" alt="sorpresa" width="250">
         </button>
     </form>
