@@ -2,6 +2,10 @@ $(function() {
     $("#start").on('click', function() {
         $("#forth").scrollTop(0);
         $("#p"+0).get(0).play();
+        $("#p"+1).get(0).play();
+        $("#p"+2).get(0).play();
+        $("#p"+3).get(0).play();
+        $("#p"+4).get(0).play();
     });
 
     $("#p" + 0).on('ended',function() {
