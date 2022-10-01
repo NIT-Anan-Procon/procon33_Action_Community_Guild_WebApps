@@ -2,50 +2,55 @@ $(function() {
     
     $("#start").on('click', function() {
         $("#forth").scrollTop(0);
-        //事前再生
         $("#p"+0).get(0).play();
-        $("#p"+0).get(0).pause();
+        //事前再生
         $("#p"+1).get(0).play();
         $("#p"+1).get(0).pause();
+
         $("#p"+2).get(0).play();
         $("#p"+2).get(0).pause();
+
         $("#p"+3).get(0).play();
         $("#p"+3).get(0).pause();
+
         $("#p"+4).get(0).play();
         $("#p"+4).get(0).pause();
+
         $("#p"+5).get(0).play();
         $("#p"+5).get(0).pause();
+
         $("#p"+6).get(0).play();
         $("#p"+6).get(0).pause();
+
         $("#p"+7).get(0).play();
         $("#p"+7).get(0).pause();
+
         $("#p"+8).get(0).play();
         $("#p"+8).get(0).pause();
+
         $("#p"+9).get(0).play();
         $("#p"+9).get(0).pause();
+
         $("#p"+10).get(0).play();
         $("#p"+10).get(0).pause();
+
         $("#p"+11).get(0).play();
         $("#p"+11).get(0).pause();
+
         $("#p"+12).get(0).play();
         $("#p"+12).get(0).pause();
+
         $("#p"+13).get(0).play();
         $("#p"+13).get(0).pause();
-        //事前停止
-        $("#p"+0).get(0).pause();
-        $("#p"+1).get(0).pause();
-        $("#p"+2).get(0).pause();
-        $("#p"+3).get(0).pause();
-        $("#p"+4).get(0).pause();
-        $("#p"+5).get(0).pause();
-        $("#p"+6).get(0).pause();
-        $("#p"+7).get(0).pause();
-        $("#p"+8).get(0).pause();
-        $("#p"+9).get(0).pause();
-        $("#p"+10).get(0).pause();
-        $("#p"+11).get(0).pause();
-        $("#p"+12).get(0).pause();
-        $("#p"+13).get(0).pause();
+
+        $("#p"+14).get(0).play();
+        $("#p"+14).get(0).pause();
+
+        $("#p"+15).get(0).play();
+        $("#p"+15).get(0).pause();
+
+        $("#p"+16).get(0).play();
+        $("#p"+16).get(0).pause();
     });
     
 
@@ -113,5 +118,40 @@ $(function() {
         $("#forth").scrollTop(0);
         $("#forth").scrollTop(5200);
         $("#p"+13).get(0).play();
+    });
+    $("#p" + 13).on('ended',function() {
+        $("#forth").scrollTop(0);
+        $("#forth").scrollTop(5600);
+        $("#p"+14).get(0).play();
+    });
+    $("#p" + 14).on('ended',function() {
+        $("#forth").scrollTop(0);
+        $("#forth").scrollTop(6000);
+        $("#p"+15).get(0).play();
+    });
+    $("#p" + 15).on('ended',function() {
+        $("#forth").scrollTop(0);
+        $("#forth").scrollTop(6400);
+        $("#p"+16).get(0).play();
+    });
+    $("#p" + 16).on('ended',function() {
+        $("#forth").scrollTop(0);
+        $("#forth").scrollTop(6800);
+        $("#p"+17).get(0).play();
+    });
+    $("#p" + 17).on('ended',function() {
+        $("#forth").scrollTop(0);
+        $("#forth").scrollTop(7200);
+        $("#p"+18).get(0).play();
+    });
+    $("#p" + 18).on('ended',function() {
+        $("#forth").scrollTop(0);
+        $("#forth").scrollTop(7600);
+        $("#p"+19).get(0).play();
+    });
+    $("#p" + 19).on('ended',function() {
+        $("#forth").scrollTop(0);
+        $("#forth").scrollTop(8000);
+        $("#p"+20).get(0).play();
     });
 });
