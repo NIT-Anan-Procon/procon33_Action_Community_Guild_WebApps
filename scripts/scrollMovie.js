@@ -1,16 +1,26 @@
 $(function() {
+    
     $("#start").on('click', function() {
         $("#forth").scrollTop(0);
         //事前再生
         $("#p"+0).get(0).play();
+        $("#p"+0).get(0).pause();
         $("#p"+1).get(0).play();
+        $("#p"+1).get(0).pause();
         $("#p"+2).get(0).play();
+        $("#p"+2).get(0).pause();
         $("#p"+3).get(0).play();
+        $("#p"+3).get(0).pause();
         $("#p"+4).get(0).play();
+        $("#p"+4).get(0).pause();
         $("#p"+5).get(0).play();
+        $("#p"+6).get(0).pause();
         $("#p"+6).get(0).play();
+        $("#p"+6).get(0).pause();
         $("#p"+7).get(0).play();
+        $("#p"+7).get(0).pause();
         $("#p"+8).get(0).play();
+        $("#p"+8).get(0).pause();
         $("#p"+9).get(0).play();
         $("#p"+10).get(0).play();
         $("#p"+11).get(0).play();
@@ -32,6 +42,7 @@ $(function() {
         $("#p"+12).get(0).pause();
         $("#p"+13).get(0).pause();
     });
+    
 
     $("#p" + 0).on('ended',function() {
         $("#forth").scrollTop(0);
