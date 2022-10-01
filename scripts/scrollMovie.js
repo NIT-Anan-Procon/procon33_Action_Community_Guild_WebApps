@@ -1,6 +1,7 @@
 $(function() {
     $("#start").on('click', function() {
         $("#forth").scrollTop(0);
+        //事前再生
         $("#p"+0).get(0).play();
         $("#p"+1).get(0).play();
         $("#p"+2).get(0).play();
@@ -15,6 +16,21 @@ $(function() {
         $("#p"+11).get(0).play();
         $("#p"+12).get(0).play();
         $("#p"+13).get(0).play();
+        //事前停止
+        $("#p"+0).get(0).paused();
+        $("#p"+1).get(0).paused();
+        $("#p"+2).get(0).paused();
+        $("#p"+3).get(0).paused();
+        $("#p"+4).get(0).paused();
+        $("#p"+5).get(0).paused();
+        $("#p"+6).get(0).paused();
+        $("#p"+7).get(0).paused();
+        $("#p"+8).get(0).paused();
+        $("#p"+9).get(0).paused();
+        $("#p"+10).get(0).paused();
+        $("#p"+11).get(0).paused();
+        $("#p"+12).get(0).paused();
+        $("#p"+13).get(0).paused();
     });
 
     $("#p" + 0).on('ended',function() {
