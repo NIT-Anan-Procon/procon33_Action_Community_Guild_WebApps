@@ -73,6 +73,10 @@ body {
     height: 400px;
     width: 100%;
 }
+video::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1 !important;
+}
 .fifth {
     margin-top: 20px;
 }
