@@ -2,6 +2,19 @@ $(function() {
     $("#start").on('click', function() {
         $("#forth").scrollTop(0);
         $("#p"+0).get(0).play();
+        $("#p"+1).get(0).play();
+        $("#p"+2).get(0).play();
+        $("#p"+3).get(0).play();
+        $("#p"+4).get(0).play();
+        $("#p"+5).get(0).play();
+        $("#p"+6).get(0).play();
+        $("#p"+7).get(0).play();
+        $("#p"+8).get(0).play();
+        $("#p"+9).get(0).play();
+        $("#p"+10).get(0).play();
+        $("#p"+11).get(0).play();
+        $("#p"+12).get(0).play();
+        $("#p"+13).get(0).play();
     });
 
     $("#p" + 0).on('ended',function() {
