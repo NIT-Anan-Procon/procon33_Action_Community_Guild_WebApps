@@ -14,7 +14,7 @@ $(function() {
         $("#p"+4).get(0).play();
         $("#p"+4).get(0).pause();
         $("#p"+5).get(0).play();
-        $("#p"+6).get(0).pause();
+        $("#p"+5).get(0).pause();
         $("#p"+6).get(0).play();
         $("#p"+6).get(0).pause();
         $("#p"+7).get(0).play();
