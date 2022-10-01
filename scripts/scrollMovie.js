@@ -22,10 +22,15 @@ $(function() {
         $("#p"+8).get(0).play();
         $("#p"+8).get(0).pause();
         $("#p"+9).get(0).play();
+        $("#p"+9).get(0).pause();
         $("#p"+10).get(0).play();
+        $("#p"+10).get(0).pause();
         $("#p"+11).get(0).play();
+        $("#p"+11).get(0).pause();
         $("#p"+12).get(0).play();
+        $("#p"+12).get(0).pause();
         $("#p"+13).get(0).play();
+        $("#p"+13).get(0).pause();
         //事前停止
         $("#p"+0).get(0).pause();
         $("#p"+1).get(0).pause();
