@@ -51,6 +51,18 @@ $(function() {
 
         $("#p"+16).get(0).play();
         $("#p"+16).get(0).pause();
+
+        $("#p"+17).get(0).play();
+        $("#p"+17).get(0).pause();
+        
+        $("#p"+18).get(0).play();
+        $("#p"+18).get(0).pause();
+
+        $("#p"+19).get(0).play();
+        $("#p"+19).get(0).pause();
+
+        $("#p"+20).get(0).play();
+        $("#p"+20).get(0).pause();
     });
     
 
