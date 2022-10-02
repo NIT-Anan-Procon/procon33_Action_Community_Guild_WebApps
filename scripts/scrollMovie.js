@@ -1,6 +1,6 @@
 $(function() {
     
-    $("#start").on('click', function() {
+    $("#start-movie").on('click', function() {
         $("#forth").scrollTop(0);
         $("#p"+0).get(0).play();
         //事前再生

@@ -113,7 +113,7 @@
                     }
                 ?>
             </div>
-            <button id="start">
+            <button id="start-movie" class="start-movie">
                 <img src="../images/start_movie.svg" width="250">
             </button>
             <div class="fifth">
