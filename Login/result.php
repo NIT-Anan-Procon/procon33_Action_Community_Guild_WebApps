@@ -26,7 +26,7 @@
         //echo 'name ='.$_POST["name"];
         //echo '<div class="main">巣への加入が完了されたアリ</div>';
         //echo "クッキーに入ったユーザーID:".$_COOKIE["user_ID"];
-        $antColor = "ffffff";
+        $antColor = "7ECD1A";
     ?>
     <div>
         <?php echo $team_id;?>
