@@ -10,7 +10,7 @@
     $User = new User();
 
     $request_id = $_POST["request_id"];
-    echo 'request_id ='.$request_id;
+    //echo 'request_id ='.$request_id;
     $user_id = $_COOKIE["user_ID"];
     $team_id = $User -> getTeamID($user_id);
 
@@ -28,7 +28,7 @@
     if($team_id==2)$posterType = "musica";
     if($team_id==3)$posterType = "sorpresa";
 
-    var_dump($movies);
+    //var_dump($movies);
 ?>
 
 <!DOCTYPE html>
