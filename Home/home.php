@@ -88,9 +88,8 @@
                 $request_id = $Request->getRequestByUser($user_id);
                 if($request_id == NULL)continue;
 
-                //ToDo:アントの色を巣ごとに変更
                 $antColor;
-                if($team_id==0)$antColor = "FD689E";
+                if($team_id==0)$antColor = "F0738A";
                 if($team_id==1)$antColor = "53C5DE";
                 if($team_id==2)$antColor = "7ECD1A";
                 if($team_id==3)$antColor = "FF95E1";
