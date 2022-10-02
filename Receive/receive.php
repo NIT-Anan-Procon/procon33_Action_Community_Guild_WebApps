@@ -104,12 +104,6 @@
                         $movie = $value[0];
                         ?>
                             <div class="movie" id="movie">
-                                <!--
-                                    パッショーネ → poster_passione.png
-                                    スルセリオ → poster_sulserio.png
-                                    ムジカ → poster_musica.png
-                                    ソルプリザ → poster_sorpresa.png
-                                -->
                                 <video id="p<?php echo $count?>" poster="../images/poster_<?php echo $posterType?>.png" preload="auto" playsinline>
                                     <source src="<?php echo $movie;?>">
                                 </video>
