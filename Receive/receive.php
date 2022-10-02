@@ -113,6 +113,9 @@
                     }
                 ?>
             </div>
+            <button id="start">
+                <img src="../images/start_movie.svg" width="250">
+            </button>
             <div class="fifth">
                 <div class="detail">
                     <?php echo $data["detail"]; ?>
@@ -121,9 +124,7 @@
         <div>           
     </div>
     <hr width="90%">
-    <div class="comment">見たい巣の動画を選択できるアリ</div>
-    <button id="start">映像スタートボタン</button>
-    
+    <div class="comment">見たい巣の動画を選択できるアリ</div>    
     <form method="post">
         <input type="hidden" name="request_id" value="<?php echo $request_id?>">
         <button name="team" value="0">
