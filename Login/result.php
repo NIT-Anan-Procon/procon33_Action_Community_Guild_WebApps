@@ -23,14 +23,17 @@
         setcookie("user_ID",(string)$data[0],time()+60*60,"/");
 
 
-        echo 'team_id ='.$_POST["team"];
-        echo 'name ='.$_POST["name"];
-        echo '<div class="main">巣への加入が完了されたアリ</div>';
-        echo "クッキーに入ったユーザーID:".$_COOKIE["user_ID"];
-        
+        //echo 'team_id ='.$_POST["team"];
+        //echo 'name ='.$_POST["name"];
+        //echo '<div class="main">巣への加入が完了されたアリ</div>';
+        //echo "クッキーに入ったユーザーID:".$_COOKIE["user_ID"];
     ?>
-
-    <a href="../Request/request.php">リクエストかくとこ</a>
+    <div>
+        <?php echo $team_id;?>
+    </div>
+    <div>
+        <?php echo $name;?>
+    </div>
     
 </body>
 </html>
