@@ -22,6 +22,12 @@
     $counts = $Movie -> getCounts($request_id);
     $movies = $Movie -> getMovies($request_id,$team_id);
 
+    $posterType;
+    if($team_id==0)$posterType = "passione";
+    if($team_id==1)$posterType = "sulserio";
+    if($team_id==2)$posterType = "musica";
+    if($team_id==3)$posterType = "sorpresa";
+
     var_dump($movies);
 ?>
 
@@ -104,7 +110,7 @@
                                     ムジカ → poster_musica.png
                                     ソルプリザ → poster_sorpresa.png
                                 -->
-                                <video id="p<?php echo $count?>" poster="../images/poster_passione.png" preload="auto" playsinline>
+                                <video id="p<?php echo $count?>" poster="../images/poster_<?php echo $posterType?>.png" preload="auto" playsinline>
                                     <source src="<?php echo $movie;?>">
                                 </video>
                             </div>
