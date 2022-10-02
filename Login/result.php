@@ -27,12 +27,7 @@
         echo 'name ='.$_POST["name"];
         echo '<div class="main">巣への加入が完了されたアリ</div>';
         echo "クッキーに入ったユーザーID:".$_COOKIE["user_ID"];
-        <div>
-            .$_POST["team"]
-        </div>
-        <div>
-            .$_POST["name"]
-        </div>
+        
     ?>
 
     <a href="../Request/request.php">リクエストかくとこ</a>
