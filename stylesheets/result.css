@@ -4,4 +4,15 @@ body {
     font-family: 'Kiwi Maru', serif;
     background-color: #F6F3EE;
     color: #453B3B;
+    margin-top: 200px;
+}
+.ant {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.text {
+    text-align: center;
+    font-size: small;
 }
