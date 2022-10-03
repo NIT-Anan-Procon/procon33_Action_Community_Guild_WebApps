@@ -101,7 +101,6 @@
                     if((int)$data[0] >= 5){
                         $req = new Request();
                         $req->updateRequestCondition($request_id,$team_id,'1');
-                        echo $team_id." condition has been updated";
                         
                     }
                     return $data[0];
