@@ -20,13 +20,13 @@
         $name = $_POST["name"];
         $user->sendUser($name,$team_id);
         $data = $user->getUserID();
-        setcookie("user_ID",(string)$data[0],time()+60*60,"/");
+        $user_id = $data[0];
+        setcookie("user_ID",(string)$user_id,time()+60*60,"/");
 
         //echo 'team_id ='.$_POST["team"];
         //echo 'name ='.$_POST["name"];
         //echo '<div class="main">巣への加入が完了されたアリ</div>';
 
-        $user_id = "No.".$_COOKIE["user_ID"];
         $antColor;
         if($team_id==0)$antColor = "F0738A";
         if($team_id==1)$antColor = "53C5DE";
@@ -39,7 +39,7 @@
         </svg>
     </div>
     <div class="text">
-        <?php echo $user_id;?>
+        <?php echo 'No.'.$user_id;?>
     </div>
     <div class="text">
         <?php echo $name;?>
