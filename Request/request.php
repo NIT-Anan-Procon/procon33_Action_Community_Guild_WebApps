@@ -49,11 +49,6 @@
             <img src="../images/add_picture.svg" width="250" class="request-picture">
         </label>
 
-        <div class="checkbox">
-            <input type="checkbox" id="public" name="public">
-            <label for="public">全体公開にするアリか?</label>
-        </div>
-
         <button type="submit" class="form-request-submit">
             <img src="../images/send_request.svg" width="250">
         </button>
