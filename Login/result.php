@@ -4,7 +4,7 @@
     <meta charset="ShiftJIS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/assignment.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/result.css">
     <title>result page</title>
 </head>
 <body>
