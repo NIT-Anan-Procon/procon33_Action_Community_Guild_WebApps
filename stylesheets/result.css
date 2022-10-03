@@ -12,7 +12,11 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+svg {
+    display: block;
+    margin: 0 auto;
+}
 .text {
     text-align: center;
-    font-size: small;
+    font-size: medium;
 }
