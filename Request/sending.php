@@ -26,9 +26,9 @@
             if($_POST["rank"]=="E")$rank=4;
 
             $req -> sendRequest($user_id,$request_name,$detail,$rank,$_FILES["picture"]);
+            echo "送信完了";
         ?>
     </h1>
-    <div>送信が完了したアリ！</div>
 </body>
 </html>
 
