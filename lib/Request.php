@@ -123,8 +123,24 @@
             }
         }
 
-        function getLegendRequestID(){
+        function getRequestByUser($user_id){
+            $sql = "SELECT request_id FROM requests WHERE user_id = :user_id";
             
+            try{
+                $stmt = $this->dbh->prepare($sql);
+                $stmt->bindValue(':user_id',$user_id);
+                $res = $stmt -> execute();
+                if($res){
+                    $data = $stmt->fetch();
+                    if($data == NULL) return NULL;
+                    return $data[0];
+                }
+            }
+            catch(PDOException $e){
+                header('Error'.$e->getMessage());
+
+                exit();
+            }
         }
     }
 ?>

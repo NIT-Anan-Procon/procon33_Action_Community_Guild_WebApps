@@ -4,6 +4,9 @@
     <meta charset="ShiftJIS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert2@11.4.33/dist/sweetalert2.all.js"></script>
+    <script src = "../scripts/confirmAlert.js"></script>
     <link rel="stylesheet" href="../stylesheets/request.css">
     <title>REQUEST SCREEN</title>
 </head>
@@ -45,11 +48,6 @@
         <label for="request-picture" name="request-picture">
             <img src="../images/add_picture.svg" width="250" class="request-picture">
         </label>
-
-        <div class="checkbox">
-            <input type="checkbox" id="public" name="public">
-            <label for="public">全体公開にするアリか?</label>
-        </div>
 
         <button type="submit" class="form-request-submit">
             <img src="../images/send_request.svg" width="250">

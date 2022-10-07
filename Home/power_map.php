@@ -1,9 +1,18 @@
+<?php
+    ini_set('display_errors', 1);
+    require_once __DIR__."/../lib/Movie.php";
+
+    $Movie = new Movie();
+
+    $ratio = $Movie->getRatio();
+?>
+
 <script>
     let power = {
-        passione:2,
-        sulserio:11,
-        musica:3,
-        sorpresa:8
+        passione:<?php echo $ratio[0]?>,
+        sulserio:<?php echo $ratio[1]?>,
+        musica:<?php echo $ratio[2]?>,
+        sorpresa:<?php echo $ratio[3]?>
     }
 </script>
 
@@ -38,27 +47,7 @@
             </div>
         </div>
         <div class="power" id="power">
-            <!--<div class="power-passione">
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>
-            <div class="power-sulserio">
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>
-            <div class="power-musica">
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>
-            <div class="power-sorpresa">
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>-->
+            <!-- script innerHtml-->
         </div>
     </div>
     <div class="title">月間総勢力図</div>

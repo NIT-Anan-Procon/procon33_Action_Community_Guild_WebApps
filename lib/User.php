@@ -82,7 +82,7 @@
         }
 
         function getUserNameList($team_id){
-            $sql = "SELECT name FROM users WHERE team_id=:team_id";
+            $sql = "SELECT name,user_id FROM users WHERE team_id=:team_id";
             try{
                 $stmt = $this->dbh->prepare($sql);
                 $stmt->bindValue(':team_id',$team_id);

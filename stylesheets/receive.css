@@ -49,16 +49,31 @@ body {
     color: #FF95E1;
 }
 .forth {
-    display: flex;
-    white-space: nowrap;
-    overflow-x: scroll;
-}
-.forth video{
+    background-color: #453B3B;
     border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    overflow-y: scroll;
 }
-.fifth {
-    margin-top: 20px;
+.forth::-webkit-scrollbar {
+    display: none;
 }
+.movie {
+    display: block;
+    flex-flow: column;
+    height: 400px;
+    width: 100%;
+}
+.movie video{
+    display: block;
+    margin: 0 auto;
+    height: 400px;
+    width: 100%;
+}
+
 .ant_passione {
     width: 50px;
     height: 25px;
@@ -105,5 +120,6 @@ button img {
     display: none;
 }
 .add-movie {
+    filter: drop-shadow(0px 2px 0.5px rgba(184, 184, 184, 0.9));
     margin: 10px 0;
 }

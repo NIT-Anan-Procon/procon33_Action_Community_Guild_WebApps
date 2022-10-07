@@ -80,7 +80,9 @@
             return $data;
         }
 
+        //getCountsで呼び出す
         function getJudgementCount($request_id,$team_id){
+            //GOOD→1
             $sql = "SELECT count(judgement='1' or NULL) 
             FROM (
                 SELECT judgement
@@ -101,7 +103,6 @@
                     if((int)$data[0] >= 5){
                         $req = new Request();
                         $req->updateRequestCondition($request_id,$team_id,'1');
-                        echo $team_id." condition has been updated";
                         
                     }
                     return $data[0];
