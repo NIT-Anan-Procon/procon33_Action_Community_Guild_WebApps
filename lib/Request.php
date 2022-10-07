@@ -75,8 +75,9 @@
             }
         }
         
+        //依頼書の審査状態をチームによって独立している。するかしないか議論中。
         function updateRequestCondition($request_id,$team_id,$condition){
-            $sql;
+            $sql = "";
             if($team_id == 0){
                 $sql = "UPDATE {$this->table} SET condition_0 = :condition WHERE request_id = :request_id";
             }

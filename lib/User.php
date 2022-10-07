@@ -44,6 +44,7 @@
             }
         }
 
+        //直前に登録したユーザーIDの取得
         function getUserID(){
             $sql = "SELECT LAST_INSERT_ID();";
 

@@ -16,9 +16,9 @@ composer install
 ## ページ一覧
 - Home/
   - home.php
-      - ホーム画面
+    - ホーム画面
   - power_map.php
-      - 勢力図画面
+    - 勢力図画面
 - Judge/
   - judge.php
     - 審査画面
@@ -26,7 +26,7 @@ composer install
     - 依頼書送信結果表示画面
 - Login/
   - start.php
-    -スタート画面
+    - スタート画面
   - assignment.php
     - 巣(チーム)の選択画面
   - result.php
@@ -68,4 +68,20 @@ composer install
     - sendMovie
       - 動画パスとユーザー、依頼書情報をアップロードするメソッド
   - Request.php
-    - 
+    - sendRequest
+      - 依頼書のアップロードをするメソッド
+    - getRequest
+      - IDから依頼書を取得するメソッド
+    - updateRequestCondition
+      - 依頼書の審査状態を更新するメソッド
+    - getReceivesRequestID
+      - 受注リストの依頼書IDを取得するメソッド
+    - getRequestByUser
+      - ユーザーが出した依頼書IDを取得するメソッド
+  - User.php
+    - sendUser
+      - ユーザー登録をするメソッド
+    - getTeamID
+      - ユーザーの所属するチームIDを取得
+    - getUserNameList
+      - チームの依頼書を書いたアリのリストを取得するメソッド(ホーム画面に表示する)
