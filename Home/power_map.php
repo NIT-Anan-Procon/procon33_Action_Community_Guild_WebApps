@@ -47,27 +47,7 @@
             </div>
         </div>
         <div class="power" id="power">
-            <!--<div class="power-passione">
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>
-            <div class="power-sulserio">
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>
-            <div class="power-musica">
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>
-            <div class="power-sorpresa">
-                <div class="data"></div>
-                <div class="data"></div>
-            </div>-->
+            <!-- script innerHtml-->
         </div>
     </div>
     <div class="title">月間総勢力図</div>

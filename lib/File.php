@@ -1,4 +1,5 @@
 <?php
+    //JS側で処理するので拡張子確認は省く
     class File{
         
         function __construct(){
@@ -16,8 +17,6 @@
             $pathdir = '/uploads/';
             $path = $pathdir.$file_name;
 
-            //写真ファイルか判断してエラーを出したい
-
             move_uploaded_file($img['tmp_name'],$upload);
 
             return $path;
@@ -33,8 +32,6 @@
 
             $pathdir = '/uploads/';
             $path = $pathdir.$file_name;
-
-            //動画ファイルか判断してエラーを出したい
 
             move_uploaded_file($movie['tmp_name'],$upload);
 

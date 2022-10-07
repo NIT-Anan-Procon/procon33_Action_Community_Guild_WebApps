@@ -1,3 +1,4 @@
+//動画ファイル追加時のアラート表示
 $(function() {
     $("#add-movie").change(function(e) {
         var file = e.target.files[0];
@@ -29,6 +30,7 @@ $(function() {
     });
 });
 
+//動画投稿時のアラート表示
 $(function() {
     $("#send-movie").on('click', function() {
         Swal.fire({

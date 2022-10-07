@@ -80,7 +80,9 @@
             return $data;
         }
 
+        //getCountsで呼び出す
         function getJudgementCount($request_id,$team_id){
+            //GOOD→1
             $sql = "SELECT count(judgement='1' or NULL) 
             FROM (
                 SELECT judgement

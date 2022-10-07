@@ -16,10 +16,6 @@
             else{
                 $judgement = 0;
             }
-
-            // echo "request_id = ".$_POST["request_id"];
-            // echo "user_id = ".$_COOKIE["user_ID"];
-            // echo "judgement = ".$judgement;
                       
            
             $Judge->sendJudgement($_POST["request_id"],$_COOKIE["user_ID"],$judgement);
@@ -32,7 +28,6 @@
     $request_id = $t["0"];
     $request = $req->getRequest($request_id);
     $counts = $Judge->getCounts($request_id);
-    //var_dump($counts);
 
     if($request["image_path"] == ''){
         $request["image_path"] = '../images/kemono.jpg';

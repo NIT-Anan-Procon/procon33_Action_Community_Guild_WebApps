@@ -22,11 +22,7 @@
         $data = $user->getUserID();
         $user_id = $data[0];
         setcookie("user_ID",(string)$user_id,time()+60*60,"/");
-
-        //echo 'team_id ='.$_POST["team"];
-        //echo 'name ='.$_POST["name"];
-        //echo '<div class="main">巣への加入が完了されたアリ</div>';
-
+        
         $antColor;
         if($team_id==0)$antColor = "F0738A";
         if($team_id==1)$antColor = "53C5DE";

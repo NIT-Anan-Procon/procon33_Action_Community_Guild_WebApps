@@ -1,3 +1,4 @@
+//連続再生の実装。もっと美しい実装があったのかもしれない。
 $(function() {
     
     $("#start-movie").on('click', function() {

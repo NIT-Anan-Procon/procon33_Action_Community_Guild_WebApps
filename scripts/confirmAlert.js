@@ -1,3 +1,4 @@
+//画像選択した際のアラート表示
 $(function() {
     $("#request-picture").change(function(e) {
         var file = e.target.files[0];

@@ -54,7 +54,7 @@
     <script src = "../scripts/getRequest.js" type="text/javascript" charset="shift_jis"></script>
     <title>home page</title>
 </head>
-<body onload="getMembers();">
+<body>
     <div>
         <button  class="power-map" onclick="location.href='../Home/power_map.php'">
             <img src="../images/power_map.svg" width="250">

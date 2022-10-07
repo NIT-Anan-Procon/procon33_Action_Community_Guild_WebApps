@@ -23,6 +23,22 @@
             }
         }
 
+
+        function getRatio(){
+            $counts = array();
+            for($team_id = 0;$team_id<4;$team_id++){
+                array_push($counts,$this->count($team_id));
+            }
+
+            $ratio = array();
+            $sum = $counts[0]+$counts[1]+$counts[2]+$counts[3];
+            foreach($counts as $count){
+                array_push($ratio,1+(int)$count*10/$sum);
+            }
+            return $ratio;
+        }
+        
+        //getRatioで呼び出すメソッド
         function count($team_id){
             $sql = "SELECT count(request_id) 
             FROM movies INNER JOIN users ON movies.user_id = users.user_id
@@ -42,20 +58,7 @@
             }
         }
 
-        function getRatio(){
-            $counts = array();
-            for($team_id = 0;$team_id<4;$team_id++){
-                array_push($counts,$this->count($team_id));
-            }
-
-            $ratio = array();
-            $sum = $counts[0]+$counts[1]+$counts[2]+$counts[3];
-            foreach($counts as $count){
-                array_push($ratio,1+(int)$count*10/$sum);
-            }
-            return $ratio;
-        }
-
+        //関数名を依頼書とわかるように変更したい
         function getCounts($request_id){
             $counts = array();
             for($team_id = 0;$team_id<4;$team_id++){
@@ -64,6 +67,7 @@
             return $counts;
         }
 
+        //getCountsで呼び出すメソッド
         function countMovie($request_id,$team_id){
             $sql = "SELECT count(request_id) 
             FROM movies INNER JOIN users ON movies.user_id = users.user_id
@@ -82,6 +86,7 @@
             }
         }
 
+        
         function getMovies($request_id,$team_id){
             $sql = "SELECT movie_path 
             FROM movies INNER JOIN users
