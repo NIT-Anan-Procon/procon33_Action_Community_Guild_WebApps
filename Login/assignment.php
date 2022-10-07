@@ -12,29 +12,28 @@
 
     <form action="../Login/result.php" method="post">
         <div class="text">動画のために体を張れる情熱があるなら</div>
-        <input id="image_passione" type="radio" value="0" name="team" onclick="audio()" checked>
+        <input id="image_passione" type="radio" value="0" name="team" checked>
         <label for="image_passione" class="assign">
             <img src="../images/passione.svg" alt="passione" width="250">
         </label>
         
         <div class="text">編集を多用して高クオリティを目指すなら</div>
-        <input id="image_sulserio" type="radio" value="1" name="team" onclick="audio()">
+        <input id="image_sulserio" type="radio" value="1" name="team">
         <label for="image_sulserio" class="assign">
             <img src="../images/sulserio.svg" alt="sulserio" width="250">
         </label>
 
         <div class="text">音楽方面の動画を投稿したいなら</div>
-        <input id="image_musica" type="radio" value="2" name="team" onclick="audio()">
+        <input id="image_musica" type="radio" value="2" name="team">
         <label for="image_musica" class="assign">
             <img src="../images/musica.svg" alt="musica" width="250">
         </label>
 
         <div class="text">人のためのサプライズ動画を投稿したいなら</div>
-        <input id="image_sorpresa" type="radio" value="3" name="team" onclick="audio()">
+        <input id="image_sorpresa" type="radio" value="3" name="team">
         <label for="image_sorpresa" class="assign">
             <img src="../images/sorpresa.svg" alt="sorpresa" width="250">
         </label>
-
         
         <span id="hidden">
             書き換えれてない
@@ -44,11 +43,6 @@
             <button type="submit"><img src="../images/check.svg" alt="送信" width="30"></button>
         </div>
     </form>
-
-    <audio id="btn_audio" preload="auto">
-        <source src="../audio/niceToMeetYou.mp3" type="audio/mp3">
-    </audio>
-
 
 <script>
 function getName() {
@@ -69,10 +63,6 @@ function name(){
 	document.getElementById("hidden").innerHTML=info;
 }
 
-function audio() {
-    document.getElementById('btn_audio').currentTime = 0; //連続クリックに対応
-    document.getElementById('btn_audio').play(); //クリックしたら音を再生
-}
 </script>
 </body>
 </html>
