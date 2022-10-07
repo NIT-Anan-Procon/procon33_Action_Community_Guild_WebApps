@@ -22,9 +22,9 @@
 		echo '書き換えました';
 	?>
         <h1>ふぁーすとぺーじ</h1>
-        <a href="./Login/start.html">最初の画面</a>
+        <a href="./Login/start.php">最初の画面</a>
         <br>
-        <a href="./Login/assignment.html">配属の画面</a>
+        <a href="./Login/assignment.php">配属の画面</a>
         <br>
         <a href="./Home/home.php">ホーム画面</a>
         <br>
