@@ -47,7 +47,47 @@
             </div>
         </div>
         <div class="power" id="power">
-            <!-- script innerHtml-->
+
+            <div class="power-passione">
+            <?php 
+                for($i=0;$i<$ratio[0];$i++){
+                    ?>
+                        <div class="data"></div>
+                    <?php
+                }
+            ?>
+            </div>
+            
+            <div class="power-sulserio">
+            <?php
+                for($i=0;$i<$ratio[1];$i++){
+                    ?>
+                        <div class="data"></div>
+                    <?php
+                }
+            ?>
+            </div>
+
+            <div class="power-musica">
+                <?php
+                    for($i=0;$i<$ratio[2];$i++){
+                        ?>
+                            <div class="data"><div>
+                        <?php
+                    }
+                ?>
+            </div>
+
+            <div class="power-sorpresa">
+                <?php
+                    for($i=0;$i<$ratio[3];$i++){
+                        ?>
+                            <dive class="data"><div>
+                        <?php
+                    }
+                ?>
+            </div>
+
         </div>
     </div>
     <div class="title">月間総勢力図</div>
