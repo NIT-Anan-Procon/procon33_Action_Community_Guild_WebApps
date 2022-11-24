@@ -30,7 +30,7 @@ $(function() {
     });
 });
 
-//依頼投稿時のアラート表示
+//依頼投稿時のアラート表示。
 $(function() {
     $("#request-submit").on('click', function() {
         Swal.fire({
