@@ -14,6 +14,6 @@
     <img src="../images/ant_first.svg" alt="ant" height="70px">
     <div class="text">社会性を持って行動しましょう</div>
     <div class="text">語尾は「～アリ」に絶対してください</div>
-    <div class="text">覚悟はお<span>あり</span>ですか？</div>
+    <div class="text">覚悟はお<span>ありり</span>ですか？</div>
 </body>
 </html>
