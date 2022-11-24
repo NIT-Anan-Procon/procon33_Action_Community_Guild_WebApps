@@ -29,3 +29,14 @@ $(function() {
         reader.readAsDataURL(file);
     });
 });
+
+//依頼投稿時のアラート表示
+$(function() {
+    $("#request-submit").on('click', function() {
+        Swal.fire({
+            text: "依頼をアップロードしてますアリ",
+            showConfirmButton: false,
+            imageUrl:"../images/loading.gif"
+        });
+    });
+});

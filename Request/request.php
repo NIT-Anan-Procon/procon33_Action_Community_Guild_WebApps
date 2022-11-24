@@ -48,8 +48,7 @@
         <label for="request-picture" name="request-picture">
             <img src="../images/add_picture.svg" width="250" class="request-picture">
         </label>
-
-        <button type="submit" class="form-request-submit">
+        <button type="submit" class="form-request-submit" id="request-submit">
             <img src="../images/send_request.svg" width="250">
         </button>
     </form>
