@@ -16,7 +16,12 @@
         $user = new User();
         $Request = new Request();
 
-        $user_id = $_COOKIE["user_ID"];
+        if(isset($_COOKIE["user_ID"])){
+            $user_id = $_COOKIE["user_ID"];
+        }
+        else{
+            $user_id = 0;
+        }
         $team_id = $user->getTeamID($user_id);
         
         $data = $user->getUserNameList($team_id);

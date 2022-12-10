@@ -4,6 +4,14 @@
     require_once __DIR__."/../lib/Judgement.php";
     $Judge = new Judgement();
     $req = new Request();
+
+    if(isset($_COOKIE["user_ID"])){
+        $user_id = $_COOKIE["user_ID"];
+    }
+    else{
+        //匿名のお客様　$user_id = 0　匿名アリさん
+        $user_id = 0;
+    }
         
         if(isset($_POST['submit'])){
             $judgement;
@@ -16,15 +24,15 @@
             else{
                 $judgement = 0;
             }
-                      
-           
-            $Judge->sendJudgement($_POST["request_id"],$_COOKIE["user_ID"],$judgement);
+        
+          
+            $Judge->sendJudgement($_POST["request_id"],$user_id,$judgement);
             $Judge->getCounts($_POST["request_id"]);
         }
     ?>
 
 <?php
-    $t = $Judge->getNotJudgedRequestID($_COOKIE["user_ID"]);
+    $t = $Judge->getNotJudgedRequestID($user_id);
     $request_id = $t["0"];
     $request = $req->getRequest($request_id);
     $counts = $Judge->getCounts($request_id);

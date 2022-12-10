@@ -106,10 +106,12 @@
         }
 
         function getReceivesRequestID($team_id){
-            $team = "condition_".$team_id;
-            $sql = "SELECT request_id FROM requests WHERE {$team} = 1";
+            // $team = "condition_".$team_id;
+            // $sql = "SELECT request_id FROM requests WHERE {$team} = 1";
+            $sql = "SELECT request_id FROM requests";
 
             try{
+
                 $stmt = $this->dbh->prepare($sql);
                 $res = $stmt -> execute();
                 if($res){

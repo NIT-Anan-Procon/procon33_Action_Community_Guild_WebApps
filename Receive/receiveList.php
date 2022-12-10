@@ -13,9 +13,14 @@
     $user = new User();
     $movie = new Movie();
 
-    $team_id = $user->getTeamID($_COOKIE["user_ID"]);
+    if(isset($_COOKIE["user_ID"])){
+        $team_id = $user->getTeamID($_COOKIE["user_ID"]);    
+    }
+    else{
+        //user_IDクッキーがない匿名のお客様。パッショーネ、匿名アリにする。
+        $team_id = 0;
+    }
     $data = $req->getReceivesRequestID($team_id);
-
     foreach($data as $key => $value){
         $request_id = $value[0];
         $request = $req->getRequest($request_id);
@@ -60,12 +65,12 @@
     <title>receive page</title>
 </head>
 <body onload="getRequestList();">
-    <button class="total" onclick="location.href='../Home/power_map.php'">
+    <!--<button class="total" onclick="location.href='../Home/power_map.php'">
         <img src="../images/receive_total.svg" width="250">
     </button>
     <button class="legend" onclick="location.href='../Receive/legendList.php'">
         <img src="../images/receive_legend.svg" width="250">
-    </button>
+    </button>-->
     <div id="requestList">なにもJSから受け取ってないよ</div>
 </body>
 </html>
