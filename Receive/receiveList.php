@@ -13,9 +13,14 @@
     $user = new User();
     $movie = new Movie();
 
-    $team_id = $user->getTeamID($_COOKIE["user_ID"]);
+    if(isset($_COOKIE["user_ID"])){
+        $team_id = $user->getTeamID($_COOKIE["user_ID"]);    
+    }
+    else{
+        //user_IDクッキーがない匿名のお客様。パッショーネ、匿名アリにする。
+        $team_id = 0;
+    }
     $data = $req->getReceivesRequestID($team_id);
-
     foreach($data as $key => $value){
         $request_id = $value[0];
         $request = $req->getRequest($request_id);

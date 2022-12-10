@@ -14,6 +14,7 @@
             require_once __DIR__."/../lib/Request.php";
         
             $req = new Request();
+            $user_id = -1;
             $user_id = $_COOKIE["user_ID"];
 
             $request_name = $_POST["request_name"];
