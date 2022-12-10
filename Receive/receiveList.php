@@ -65,12 +65,12 @@
     <title>receive page</title>
 </head>
 <body onload="getRequestList();">
-    <button class="total" onclick="location.href='../Home/power_map.php'">
+    <!--<button class="total" onclick="location.href='../Home/power_map.php'">
         <img src="../images/receive_total.svg" width="250">
     </button>
     <button class="legend" onclick="location.href='../Receive/legendList.php'">
         <img src="../images/receive_legend.svg" width="250">
-    </button>
+    </button>-->
     <div id="requestList">なにもJSから受け取ってないよ</div>
 </body>
 </html>
