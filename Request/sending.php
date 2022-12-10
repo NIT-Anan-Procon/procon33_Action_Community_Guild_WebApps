@@ -14,8 +14,14 @@
             require_once __DIR__."/../lib/Request.php";
         
             $req = new Request();
-            $user_id = -1;
-            $user_id = $_COOKIE["user_ID"];
+            
+            if(isset($_COOKIE["request_name"])){
+                $user_id = $_COOKIE["user_ID"];
+            }
+            else{
+                //匿名のお客様 $user_ID = 0 匿名アリさん
+                $user_id = 0;
+            }
 
             $request_name = $_POST["request_name"];
             $detail = $_POST["detail"];
