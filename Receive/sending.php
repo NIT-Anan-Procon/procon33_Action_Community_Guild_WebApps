@@ -14,8 +14,13 @@
         require_once __DIR__."/../lib/Movie.php";
         require_once __DIR__."/../lib/File.php";
             
-
-        $user_id = $_COOKIE["user_ID"];
+        if(isset($_COOKIE["user_ID"])){
+          $user_id = $_COOKIE["user_ID"];
+        }
+        else{
+          //匿名のお客様様 user_id = 0 パッショーネの匿名アリさん
+          $user_id = 0;
+        }
         $request_id = $_POST["request_id"];
         $movie_file = $_FILES["movie"];
 

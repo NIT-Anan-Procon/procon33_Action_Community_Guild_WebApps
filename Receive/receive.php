@@ -11,9 +11,17 @@
 
     $request_id = $_POST["request_id"];
     
-    $user_id = $_COOKIE["user_ID"];
-    $team_id = $User -> getTeamID($user_id);
+    
 
+    if(isset($_COOKIE["user_ID"])){
+        $user_id = $_COOKIE["user_ID"];
+        $team_id = $User -> getTeamID($user_id);
+    }
+    else{
+        //匿名のお客様 パッショーネとして招待
+        $team_id = 0;
+    }
+    
     if(isset($_POST["team"])){
         $team_id = $_POST["team"];
     }
